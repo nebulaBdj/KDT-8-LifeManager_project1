@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Life Manager</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://kit.fontawesome.com/c4b66f4de9.js" crossorigin="anonymous"></script>
+		<style>
+			.jumplink{
+				/* display: flex; */
+				text-decoration-line: none;
+			}
+			.arrow{
+				color: black;
+				margin-left: 70%;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<div class="highnav">
+
+			<a onclick="weatherChange()" id="weather" class="icon solid fa-sun" style="left: 0.5%; display: flex;"><span class="weather">weather</span>
+				<p style="font-size: 30px; position:  relative; left: 10px;" class="temperature"></p>	
+			</a>
+				
+			
+			<a href="" class="icon solid fa-arrow-right-to-bracket"><span class="login">login</span></a>
+		</div>
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#home" class="icon solid fa-house"><span>Home</span></a>
+						<a href="#health" class="icon solid fa-dumbbell"><span>health</span></a>
+						<a href="#entertainment" class="icon solid fa-icons"><span>enter</span></a>
+						<a href="#todolist" class="icon solid fa-list"><span>To_do_list</span></a>
+					</nav>
+
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+
+						<article id="home" class="panel intro">
+							<header>
+								<h1>Life manager</h1>
+								<p>당신의 생활의 새로운 변화를 불러일으킬 Life Manager입니다.</p>
+							</header>
+							<a href="#health" class="jumplink pic">
+								<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+								<img src="images/me.jpg" alt="" />
+							</a>
+						</article>
+
+						<!-- health -->
+							<article id="health" class="panel">
+								<header>
+									<h2>health assist</h2>
+								</header>
+								<p>
+									자신의 몸상태 점수와 추이, 운동 일지, 식단 기록을 통해 건강을 관리하고, 
+                                    개인에게 맞는 운동 영상 추천을 통해 사용자의 건강 관리에 도움을 줍니다. 
+								</p>
+								<section>
+									<div class="row">
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="./images/health_point.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="./images/health_graph.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="./images/health_memo.jpg" alt=""></a>
+										</div>
+									</div>
+								</section>
+								<a href="" class="jumplink">
+									<span class="arrow icon solid fa-chevron-right"><span> See my health assist</span></span>
+								</a>
+							</article>
+
+						<!-- entertainment -->
+							<article id="entertainment" class="panel">
+								<header>
+									<h2>My entertainment</h2>
+								</header>
+								<p>
+									사용자의 SNS 계정을 통합하여 한번에 확인할 수 있도록 도와줍니다. 
+                                    그리고 개인에게 맞는 맞춤 미디어 콘텐츠 추천 서비스를 통해 일상의 무료함을 해결할 수 있습니다. 
+								</p>
+								<section>
+									<div class="row">
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="" class="image fit"><img src="./images/enter_lamen.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="" class="image fit"><img src="./images/enter_earhtjoy.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="" class="image fit"><img src="./images/enter_korean.jpg" alt=""></a>
+										</div>
+                                        <div class="col-4 col-6-medium col-12-small">
+											<a href="" class="image fit"><img src="./images/enter_ghibli.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="" class="image fit"><img src="./images/enter_sotree.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="" class="image fit"><img src="./images/enter_bao.jpg" alt=""></a>
+										</div>
+									</div>
+								</section>
+								<a href="" class="jumplink">
+									<span class="arrow icon solid fa-chevron-right"><span> See my entertainment</span></span>
+								</a>
+							</article>
+
+						<!-- todolist -->
+							<article id="todolist" class="panel">
+								<header>
+									<h2>To-do-list</h2>
+								</header>
+								<p>
+									앞으로의 일정을 계획하고 실행하는 데 도움을 주는 To-do-list입니다. 
+                                    정해진 일정 완수하고 SNS에 공유도 하면서 자신의 계획을 성공해보세요! 
+								</p>
+								<section>
+									<div class="row">
+										<div style="width: 100%;" class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="./images/todolist_complete.jpg" alt="">
+									</div>
+								</section>
+								<a href="" class="jumplink">
+									<span class="arrow icon solid fa-chevron-right"><span> See my To-do-list</span></span>
+								</a>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; Life Manager</li><li>Design: <span>황이조</span></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/weather.js"></script>
+
+	</body>
+</html>
