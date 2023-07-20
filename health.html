@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="health.css" />
+  </head>
+  <body>
+    <!-- 네비바 -->
+    <nav class="highnav">
+      <a href="" class="icon solid fa-sun" style="left: 0.5%"
+        ><span class="weather">weather</span></a
+      >
+      <ul id="menu">
+        <li class="icon">
+          <a href="entertainment.html"
+            ><i class="icon solid fa-house" style="color: #ffffff"
+              ><span>Home</span></i
+            ></a
+          >
+        </li>
+        <li class="icon">
+          <a href="index.html"
+            ><i class="icon solid fa-dumbbell" style="color: #ffffff"
+              ><span>health</span></i
+            ></a
+          >
+        </li>
+        <li class="icon">
+          <a href="health.html"
+            ><i class="icon solid fa-icons" style="color: #ffffff"
+              ><span>enter</span></i
+            ></a
+          >
+        </li>
+        <li class="icon">
+          <a href="to_do_list.html"
+            ><i class="icon solid fa-list" style="color: #ffffff"
+              ><span>To-do-list</span></i
+            ></a
+          >
+        </li>
+      </ul>
+      <a href="" class="icon solid fa-arrow-right-to-bracket"
+        ><span class="login">login</span></a
+      >
+    </nav>
+    <!-- 네비바 끝 -->
+
+    <!-- 몸무게 그래프, BMI 일지 -->
+
+    <div class="div1">
+      <div class="weight">
+        <canvas id="myChart" style="height: 1000px; width: 1800px"></canvas>
+        <h1 class="weighth1">몸무게</h1>
+        <div class="today">
+          <p>오늘의 내 몸무게</p>
+          <input
+            style="width: 230px; height: 50px; font-size: 30px"
+            type="text"
+            id="tdweight"
+          />
+          <label style="font-size: 30px">kg</label>
+          <button
+            style="width: 60px; height: 56px; font-size: 20px; margin-left: 5px"
+            onclick="btn1();"
+          >
+            확인
+          </button>
+        </div>
+      </div>
+      <div class="health">
+        <h1 class="bmih1">BMI 수치</h1>
+        <canvas id="bmiChart" style="height: 1000px; width: 900px"></canvas>
+      </div>
+    </div>
+    <!-- 몸무게 그래프, BMI 끝 -->
+
+    <!-- 식단 코드 -->
+    <div class="div2">
+      <div class="diet">
+        <canvas id="dietChart" style="width: 500px; height: 500px"></canvas>
+        <h1 class="dieth1">칼로리</h1>
+        <h3 class="dieth3">
+          목표 칼로리&nbsp;&nbsp;&nbsp;&nbsp; :
+          &nbsp;&nbsp;&nbsp;&nbsp;2133&nbsp;cal
+        </h3>
+        <h3 class="dieth3_2">
+          현재 칼로리&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp;
+        </h3>
+        <p id="now_cal"></p>
+        <label class="cal_label">cal</label>
+        <input type="text" id="diet_input" onkeypress="diet_cal(event)" />
+      </div>
+      <!-- 식단 코드 끝 -->
+
+      <!-- 운동 일지 코드 -->
+      <div class="healthDiary">
+        <h1 class="healthDiaryh1">운동 일지</h1>
+        <div class="side"></div>
+        <textarea
+          type="text"
+          id="diaryinput"
+          cols="10"
+          rows="20"
+          onkeypress="show_name(event)"
+        ></textarea>
+        <p id="word"></p>
+      </div>
+      <!-- 운동 일지 코드 끝 -->
+
+      <!-- 운동 영상 코드 -->
+      <div class="video">
+        <h1 class="videoh1">운동 영상</h1>
+        <iframe
+          class="v1"
+          src="https://www.youtube.com/embed/z418jyQ-L2I"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          class="v2"
+          src="https://www.youtube.com/embed/zjfGs_iIIE8"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <script src="./health.js"></script>
+  </body>
+</html>
