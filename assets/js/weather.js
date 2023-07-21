@@ -40,6 +40,9 @@ function weatherChange() {
   } else if (weat == "Snow") {
     $("#weather").removeClass();
     $("#weather").addClass("icon solid fa-snowflake");
+  } else if (weat == "Haze") {
+    $("#weather").removeClass();
+    $("#weather").addClass("icon solid fa-water");
   }
 
   let temreal = document.querySelector(".temperature");
