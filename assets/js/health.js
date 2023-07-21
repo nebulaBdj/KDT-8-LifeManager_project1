@@ -16,7 +16,7 @@ var myChart = new Chart(chartArea, {
     ],
   },
   options: {
-    responsive: false,
+    maintainAspectRatio: false,
     scales: {
       y: [
         {
@@ -47,7 +47,7 @@ var bmiChart = new Chart(chartArea, {
     ],
   },
   options: {
-    responsive: true,
+    maintainAspectRatio: false,
     scales: {
       y: {
         min: 20,
@@ -59,8 +59,9 @@ var bmiChart = new Chart(chartArea, {
 
 function btn1() {
   let tdweight = document.getElementById("tdweight").value;
+  let tdheight = document.getElementById("tdheight").value;
   tdweight = Number(tdweight);
-  let bmi = tdweight / ((174 * 174) / 10000);
+  let bmi = tdweight / ((tdheight * tdheight) / 10000);
   console.log(bmi.toFixed(1));
 
   var dataset = myChart.data.datasets;
@@ -92,8 +93,7 @@ var dietChart = new Chart(ctx, {
     ],
   },
   options: {
-    //cutoutPercentage: 90,
-    responsive: false,
+    maintainAspectRatio: false,
   },
 });
 
@@ -114,7 +114,7 @@ function diet_cal(e) {
   let cal_word = document.getElementById("now_cal");
 
   if (e.keyCode === 13) {
-    cal_word.innerHTML = cal_text;
+    cal_word.innerHTML += cal_text;
     console.log(Number(cal_text));
 
     let nowcal = Math.floor((cal_text / 2133) * 100);
@@ -130,4 +130,12 @@ function diet_cal(e) {
     }
     dietChart.update();
   }
+}
+
+function delee() {
+  const a = document.getElementById("word").value;
+  const b = document.getElementById("diaryinput").value;
+  const c = document.getElementById("diaryinput");
+
+  a.remove();
 }
