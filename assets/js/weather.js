@@ -43,6 +43,7 @@ function weatherChange() {
   }
 
   let temreal = document.querySelector(".temperature");
+  temp = temp.toFixed(1);
   temreal.innerText = `${temp}°C`;
   console.log(temreal.innerText);
 
