@@ -1,0 +1,195 @@
+.div1 {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin: 40px;
+}
+
+.weight {
+  left: 40px;
+  background-color: white;
+  width: 900px;
+  height: 500px;
+  border-radius: 40px;
+}
+
+.health {
+  position: relative;
+  left: 10px;
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  border-radius: 40px;
+  text-align: center;
+}
+
+.weighth1 {
+  position: absolute;
+  left: 420px;
+  top: 10px;
+}
+
+.bmih1 {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+}
+
+.today {
+  position: absolute;
+  left: 600px;
+}
+
+#myChart {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+
+#bmiChart {
+  position: absolute;
+  top: 100px;
+}
+
+.div2 {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin: 40px;
+  margin-bottom: 50px;
+}
+
+.diet {
+  position: absolute;
+  background-color: white;
+  width: 400px;
+  height: 600px;
+  top: 30px;
+  left: 20px;
+  border-radius: 40px;
+}
+
+.diet .dieth1 {
+  position: absolute;
+  left: 155px;
+  top: 20px;
+}
+
+.diet .dieth3 {
+  position: absolute;
+  left: 80px;
+  top: 370px;
+}
+
+.diet .dieth3_2 {
+  display: inline-block;
+  position: absolute;
+  left: 80px;
+  top: 430px;
+}
+
+#now_cal {
+  display: inline-block;
+  position: absolute;
+  left: 225px;
+  top: 436px;
+  font-weight: bold;
+}
+
+.cal_label {
+  display: inline-block;
+  position: absolute;
+  left: 269px;
+  top: 452px;
+  font-weight: bold;
+}
+
+#diet_input {
+  position: absolute;
+  left: 120px;
+  top: 520px;
+  height: 30px;
+  width: 130px;
+}
+
+#dietChart {
+  position: absolute;
+  left: 2px;
+  top: 100px;
+}
+
+.healthDiary {
+  position: absolute;
+  background-color: white;
+  width: 400px;
+  height: 600px;
+  top: 30px;
+  left: 500px;
+  border-radius: 40px;
+}
+
+.healthDiaryh1 {
+  position: absolute;
+  left: 150px;
+  top: 20px;
+}
+
+.side {
+  display: inline-block;
+  position: absolute;
+  width: 400px;
+  height: 350px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  left: 0px;
+  top: 100px;
+}
+
+#diaryinput {
+  position: absolute;
+  width: 394px;
+  height: 120px;
+  font-size: 20px;
+  top: 475px;
+  border-radius: 0 0 40px 40px;
+}
+
+#word {
+  position: absolute;
+  left: 5px;
+  right: 0px;
+  top: 90px;
+  font-size: 20px;
+}
+
+.video {
+  position: absolute;
+  background-color: white;
+  width: 400px;
+  height: 600px;
+  top: 30px;
+  left: 1000px;
+  border-radius: 40px;
+}
+
+.videoh1 {
+  position: absolute;
+  left: 150px;
+  top: 20px;
+}
+
+.v1 {
+  position: absolute;
+  width: 360px;
+  height: 200px;
+  left: 20px;
+  top: 110px;
+}
+
+.v2 {
+  position: absolute;
+  width: 360px;
+  height: 200px;
+  left: 20px;
+  top: 350px;
+}

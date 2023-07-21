@@ -84,7 +84,7 @@ var dietChart = new Chart(ctx, {
     datasets: [
       {
         label: "# of Tomatoes",
-        data: [50.8, 49.2],
+        data: [0, 100],
         backgroundColor: ["rgba(255, 99, 132, 0.5)", "rgba(54, 162, 235, 0.2)"],
         borderColor: ["rgba(255, 206, 86, 1)"],
         borderWidth: 1,
@@ -99,12 +99,13 @@ var dietChart = new Chart(ctx, {
 
 function show_name(e) {
   let word = document.getElementById("word");
+  const diaryinputEl = document.getElementById("diaryinput");
   let txt = document.getElementById("diaryinput").value;
+  const txt2 = diaryinputEl.value;
 
   if (e.keyCode === 13) {
-    word.innerText = txt;
-  } else if (e.keyCode === 16) {
-    txt.value = txt.value + "\n";
+    word.innerText += txt;
+    diaryinputEl.value = "";
   }
 }
 
