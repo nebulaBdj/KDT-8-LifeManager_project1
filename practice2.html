@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>방명록입니다.</p>
+    <span style="margin: 0px 12px; font-weight: bold;">작성자</span><input type="text" id="name"><br>
+    <span style="margin: 0px 20px; font-weight: bold;">내용</span><input style="width: 1000px;" type="text" id="text"><br>
+    <button style="margin: 20px 0px;" onclick="bang()" id="wr">작성</button>
+
+    <table border="1" cellspacing="2" cellpadding="5"  id="table">
+        <tr>
+            <th>번호</th>
+            <th>작성자</th>
+            <th>내용</th>
+            <th>작성일</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>김규리</td>
+            <td>여러분 반가워요</td>
+            <td>2022-7-2 15 : 3</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>김규리</td>
+            <td>오늘 수업도 열심히 해봐요</td>
+            <td>2022-7-2 15 : 3</td>
+        </tr>
+        <tr id="trp">
+            <td>3</td>
+            <td>홍길동</td>
+            <td>안뇽!</td>
+            <td>2022-7-2 15 : 4</td>
+        </tr>
+    </table>
+
+    <script>
+        function gDate() {
+            let currentDate = new Date();
+            let fullYear = currentDate.getFullYear()
+            let month = currentDate.getMonth()
+            let day = currentDate.getDate()
+            let hour = currentDate.getHours();
+            let minute = currentDate.getMinutes()
+
+            return `${fullYear}-${month}-${day} ${hour} : ${minute}`;
+        }
+
+        let count = 4;
+
+        function bang() {
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            let td2 = document.createElement("td");
+            let td3 = document.createElement("td");
+            let td4 = document.createElement("td");
+            let name = document.getElementById("name");
+            let text = document.getElementById("text");
+            let nameT = name.value;
+            let textT = text.value;
+
+            td1.innerHTML = count;
+            td2.innerHTML = nameT;
+            td3.innerHTML = textT;
+            td4.innerHTML = gDate();
+
+            let table = document.getElementById("table"); 
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+            table.appendChild(tr);
+            
+            count += 1;
+            
+        } 
+    </script>
+</body>
+</html>
