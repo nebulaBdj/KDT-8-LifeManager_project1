@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <script
       src="https://kit.fontawesome.com/c4b66f4de9.js"
       crossorigin="anonymous"
@@ -11,13 +12,13 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
     <link rel="stylesheet" href="assets/css/health.css" />
     <link rel="stylesheet" href="/assets/css/navBar.css" />
+    <!-- <link rel="stylesheet" href="assets/css/health_mediaquery.css" /> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body
-    style="
-      background-image: url(/images/background_img.jpg);
-      background-size: cover;
-    "
-  >
+  <body>
     <div class="highnav">
       <a
         onclick="weatherChange()"
@@ -34,12 +35,14 @@
 
       <nav id="nav">
         <a href="/index.html" class="icon solid fa-house"><span>Home</span></a>
-        <a href="#health" class="icon solid fa-dumbbell"><span>health</span></a>
-        <a href="#entertainment" class="icon solid fa-icons"
+        <a href="" class="icon solid fa-dumbbell" style="opacity: 1"
+          ><span>health</span></a
+        >
+        <a href="/entertainment.html" class="icon solid fa-icons"
           ><span>enter</span></a
         >
-        <a href="#todolist" class="icon solid fa-list" style="opacity: 1"
-          ><span>To_do_list</span></a
+        <a href="/to_do_list.html" class="icon solid fa-list"
+          ><span>To_do</span></a
         >
       </nav>
 
@@ -52,34 +55,25 @@
 
     <div class="div1">
       <div class="weight">
-        <canvas id="myChart" style="height: 400px; width: 850px"></canvas>
+        <div class="weightChart">
+          <canvas id="myChart"></canvas>
+        </div>
         <h2 class="weighth1">몸무게</h2>
         <div class="today">
-          <p>오늘의 내 몸무게</p>
-          <input
-            style="width: 100px; height: 25px; font-size: 20px"
-            type="text"
-            id="tdweight"
-          />
-          <label style="font-size: 20px">kg</label>
-          <button
-            style="
-              position: absolute;
-
-              width: 40px;
-              height: 30px;
-              font-size: 10px;
-              margin-left: 5px;
-            "
-            onclick="btn1();"
-          >
-            확인
-          </button>
+          <label>키&nbsp;&nbsp;</label>
+          <input type="text" id="tdheight" />
+          <label class="cmlabel">cm</label>
+          <label>&nbsp;&nbsp;&nbsp;몸무게&nbsp;&nbsp;</label>
+          <input type="text" id="tdweight" />
+          <label class="kglabel">kg</label>
+          <button class="weightbtn" onclick="btn1();">확인</button>
         </div>
       </div>
       <div class="health">
         <h2 class="bmih1">BMI 수치</h2>
-        <canvas id="bmiChart" style="height: 110px; width: 140px"></canvas>
+        <div class="bmi">
+          <canvas id="bmiChart"></canvas>
+        </div>
       </div>
     </div>
     <!-- 몸무게 그래프, BMI 끝 -->
@@ -87,7 +81,9 @@
     <!-- 식단 코드 -->
     <div class="div2">
       <div class="diet">
-        <canvas id="dietChart" style="width: 400px; height: 260px"></canvas>
+        <div class="diChart">
+          <canvas id="dietChart"></canvas>
+        </div>
         <h2 class="dieth1">칼로리</h2>
         <h4 class="dieth3">
           목표 칼로리&nbsp;&nbsp;&nbsp;&nbsp; :
@@ -113,6 +109,7 @@
           rows="20"
           onkeypress="show_name(event)"
         ></textarea>
+        <button id="a" onclick="delee();">삭제</button>
         <p id="word"></p>
       </div>
       <!-- 운동 일지 코드 끝 -->
@@ -138,6 +135,8 @@
         ></iframe>
       </div>
     </div>
+
+    <script src="/assets/js/weather.js"></script>
 
     <script src="assets/js/health.js"></script>
   </body>
