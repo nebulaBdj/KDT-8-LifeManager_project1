@@ -22,10 +22,17 @@
       href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
     />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta
-      name="google-signin-client_id"
-      content="1096957573126-6b2pbjb625heslke3g97l893knj9g61f.apps.googleusercontent.com.apps.googleusercontent.com"
-    />
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script
+      type="text/javascript"
+      src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-1.11.3.min.js"
+    ></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
   </head>
   <body>
     <nav class="highnav">
@@ -108,7 +115,9 @@
                     <a href="#" class="text-links"> Forgot Password</a>
                   </div>
                   <div class="group">
-                    <input type="submit" class="button" value="Sign In" />
+                    <form action="http://127.0.0.1:5500/index.html">
+                      <input type="submit" class="button" value="Sign In" />
+                    </form>
                   </div>
                   <div class="hr"></div>
                   <div class="foot">
@@ -118,29 +127,44 @@
                     <button
                       class="btn-social-login"
                       style="background: #d93025"
-                      onclick="GoogleSignIn"
                     >
-                      <i class="xi-2x xi-google"></i>
+                      <a
+                        href="https://accounts.google.com/o/oauth2/auth?client_id=1096957573126-6b2pbjb625heslke3g97l893knj9g61f.apps.googleusercontent.com&redirect_uri=http://127.0.0.1:5500/index.html&response_type=code&scope=https://www.googleapis.com/auth/drive.metadata.readonly"
+                        ><i class="xi-2x xi-google"></i
+                      ></a>
                     </button>
-                    <!-- <button class='btn-social-login' style='background:#4267B2'><i class="xi-2x xi-facebook"></i></button>
-<button class='btn-social-login' style='background:#55ACEE'><i class="xi-2x xi-twitter"></i></button> -->
                     <button
                       class="btn-social-login"
                       style="background: #24292e"
                     >
-                      <i class="xi-2x xi-github"></i>
+                      <a
+                        href="https://github.com/login/oauth/authorize?client_id=c449e8005a5eec5d71b4&redirect_uri=http://127.0.0.1:5500/index.html"
+                      >
+                        <i class="xi-2x xi-github"></i
+                      ></a>
                     </button>
                     <button
                       class="btn-social-login"
                       style="background: #1fc700"
                     >
-                      <i class="xi-2x xi-naver"></i>
+                      <!-- <a
+                        href="https://nid.naver.com/oauth2.0/authorize?client_id=Qc24xejDyx47wjTd9Trq&response_type=code&redirect_uri=http://127.0.0.1:5500/index.html&auth_type=reprompt"
+                      > -->
+                      <a
+                        href="https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=Qc24xejDyx47wjTd9Trq&redirect_uri=http://127.0.0.1:5500/index.html&auth_type=reauthenticate"
+                      >
+                        <i class="xi-2x xi-naver"></i
+                      ></a>
                     </button>
                     <button
                       class="btn-social-login"
                       style="background: #ffeb00"
                     >
-                      <i class="xi-2x xi-kakaotalk text-dark"></i>
+                      <a
+                        href="https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=3a6c3035c801405eaa71ebb9dc7f474b&redirect_uri=http://127.0.0.1:5500/index.html"
+                      >
+                        <i class="xi-2x xi-kakaotalk text-dark"></i>
+                      </a>
                     </button>
                   </div>
                 </div>
@@ -184,7 +208,12 @@
                     />
                   </div>
                   <div class="group">
-                    <input type="submit" class="button" value="Sign Up" />
+                    <form
+                      action="http://127.0.0.1:5500/login.html"
+                      onsubmit="SignUpSubmit();"
+                    >
+                      <input type="submit" class="button" value="Sign Up" />
+                    </form>
                   </div>
                 </div>
               </div>
@@ -195,9 +224,9 @@
     </div>
     <script src="/assets/js/weather.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
+      src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"
+      charset="utf-8"
     ></script>
+    <script src="/assets/js/login.js"></script>
   </body>
 </html>
