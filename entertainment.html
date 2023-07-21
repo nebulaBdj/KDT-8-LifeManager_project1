@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/c4b66f4de9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/entertainment.css" />
+    <link rel="stylesheet" href="assets/css/navBar.css" />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v17.0"
+      nonce="ItVHMdlY"
+    ></script>
+
+    <div id="wrapper">
+      <nav class="highnav">
+        <a
+          onclick="weatherChange()"
+          id="weather"
+          class="icon solid fa-sun"
+          style="left: 0.5%; display: flex"
+          ><span class="weather">Weather</span>
+          <p
+            style="font-size: 30px; position: relative; left: 10px; margin: 0"
+            class="temperature"
+          ></p>
+        </a>
+
+        <div id="nav">
+          <a href="index.html" class="icon solid fa-house"><span>Home</span></a>
+          <a href="health.html" class="icon solid fa-dumbbell"
+            ><span>Health</span></a
+          >
+          <a
+            href="entertainment.html"
+            class="icon solid fa-icons"
+            style="opacity: 1"
+            ><span>Ent.</span></a
+          >
+          <a href="to_do_list.html" class="icon solid fa-list"
+            ><span>To Do</span></a
+          >
+        </div>
+
+        <a href="login.html" class="icon solid fa-arrow-right-to-bracket"
+          ><span class="login">Login</span></a
+        >
+      </nav>
+      <div class="content">
+        <!-- grid 사용하여 div 배치 
+        sns의 경우, 2*2 형식으로 보여줄 예정이므로 중첩 grid 사용-->
+        <div class="sns">
+          <div class="insta">
+            <iframe
+              src="https://www.instagram.com/p/Culx9DKvsMX/embed"
+            ></iframe>
+          </div>
+
+          <div class="twitter">
+            <a
+              class="twitter-timeline"
+              data-width="300"
+              data-height="300"
+              href="https://twitter.com/gyuri88?ref_src=twsrc%5Etfw"
+            ></a>
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+          </div>
+
+          <div class="tiktok">
+            <blockquote
+              class="tiktok-embed"
+              cite="https://www.tiktok.com/@ive.official/video/7251188068219194632"
+              data-video-id="7251188068219194632"
+            >
+              <section>
+                <a
+                  target="_blank"
+                  title="♬ What It Is (Block Boy) - Doechii"
+                  href="https://www.tiktok.com/music/What-It-Is-Block-Boy-7207983914252503041?refer=embed"
+                ></a>
+              </section>
+            </blockquote>
+            <script async src="https://www.tiktok.com/embed.js"></script>
+          </div>
+
+          <div id="facebook">
+            <div
+              class="fb-page"
+              data-href="https://www.facebook.com/facebook"
+              data-tabs="timeline"
+              data-width="300px"
+              data-height="300px"
+              data-small-header="true"
+              data-adapt-container-width="false"
+              data-hide-cover="true"
+              data-show-facepile="true"
+            >
+              <blockquote
+                cite="https://www.facebook.com/facebook"
+                class="fb-xfbml-parse-ignore"
+              >
+                <a href="https://www.facebook.com/facebook"></a>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="youtube">
+          <div class="videos">
+            <iframe
+              width="300px"
+              src="https://www.youtube.com/embed/lFvZXuxy2zo"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="metadata">
+              <div class="title">
+                NCT DREAM(엔시티 드림)의 킬링보이스를 라이브로! – Candy, 맛,
+                ISTJ, 오르골, Broken Melodies, 주인공, 고래, 파랑, Beatbox |
+                딩고뮤직
+              </div>
+              <div class="views">
+                <span class="views">조회수 250만회 • 1일 전</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="videos">
+            <iframe
+              width="300px"
+              src="https://www.youtube.com/embed/zomvO2Ii-kA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="metadata">
+              <div class="title">
+                엑소(EXO)의 킬링보이스를 라이브로! - 으르렁, MAMA, 나비소녀,
+                Cream Soda, Sing For You, 전야, 중독, Monster, 첫 눈, Power
+                |딩고뮤직
+              </div>
+              <div class="views">
+                <span class="views">조회수 966만회 • 8일 전</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="videos">
+            <iframe
+              width="300px"
+              src="https://www.youtube.com/embed/_dz_bdrSX2Q"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="metadata">
+              <div class="title">
+                유키스(UKISS) 킬링보이스를 라이브로! - 갈래!, 0330, 만만하니,
+                빙글빙글, 시끄러!!, NEVERLAND,Party Tonight | 딩고뮤직| Dingo
+                Music
+              </div>
+              <div class="views">
+                <span class="views">조회수 52만회 • 2주 전</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="videos">
+            <iframe
+              width="300px"
+              src="https://www.youtube.com/embed/NrhKf7oBvvo"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="metadata">
+              <div class="title">
+                김성규(KIM SUNG KYU)의 킬링보이스를 라이브로!- 60초, Small Talk,
+                너여야만 해, Kontrol, Shine, 끌림, True Love, Savior|딩고뮤직
+              </div>
+              <div class="views">
+                <span class="views">조회수 48만회 • 3주 전</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="videos">
+            <iframe
+              width="300px"
+              src="https://www.youtube.com/embed/wD2uIS-kQ-I"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="metadata">
+              <div class="title">
+                한동근(HanDongGeun)의 킬링보이스를 라이브로! – 그대라는 사치, 이
+                소설의 끝을 다시 써보려 해, 미치고 싶다, 새벽에 걸려온 너의
+                전화는ㅣ딩고뮤직ㅣDingo Music
+              </div>
+              <div class="views">
+                <span class="views">조회수 39만회 • 1개월 전</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="videos">
+            <iframe
+              width="300px"
+              src="https://www.youtube.com/embed/YiSWza6sOyY"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="metadata">
+              <div class="title">
+                틴탑(TEEN TOP)의 킬링보이스를 라이브로! – 향수뿌리지마, 긴
+                생머리 그녀, To You 2020, 장난아냐(Rocking),
+                박수(Clap)ㅣ딩고뮤직ㅣDingo Music
+              </div>
+              <div class="views">
+                <span class="views">조회수 86만회 • 1개월 전</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="videos">
+            <iframe
+              width="300px"
+              src="https://www.youtube.com/embed/F_4y8OYaf18"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="metadata">
+              <div class="title">
+                플라워(Flower)의 킬링보이스를 라이브로! – Endless, 애정표현,
+                Please, 하루, 걸음이 느린 아이, Crying, 단 한사람, 눈물, For You
+                | 딩고뮤직
+              </div>
+              <div class="views">
+                <span class="views">조회수 111만회 • 1개월 전</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="videos">
+            <iframe
+              width="300px"
+              src="https://www.youtube.com/embed/et3VDbL7cIA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="metadata">
+              <div class="title">
+                (여자)아이들((G)I-DLE)의 킬링보이스를 라이브로! - 퀸카, TOMBOY,
+                말리지마, POP/STARS, MY BAG, 한, 덤디덤디| 딩고뮤직 | Dingo
+                Music
+              </div>
+              <div class="views">
+                <span class="views">조회수 1091만회 • 2개월 전</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="videos">
+            <iframe
+              width="300px"
+              src="https://www.youtube.com/embed/Iwdq3NtpeFQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="metadata">
+              <div class="title">
+                비투비(BTOB)의 킬링보이스를 라이브로! – 그리워하다, 너 없인 안
+                된다, 아름답고도 아프구나, 나의 바람, 두 번째 고백, 기도, 봄날의
+                기억, 언젠가 | 딩고뮤직
+              </div>
+              <div class="views">
+                <span class="views">조회수 816만회 • 2개월 전</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="videos">
+            <iframe
+              width="300px"
+              src="https://www.youtube.com/embed/eOpaBrCGbMA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="metadata">
+              <div class="title">
+                소유(SOYOU)의 킬링보이스를 라이브로! – 썸, Officially Missing
+                You Too, I Miss You, 우리는 매일 이별을 향해 걸어가지, 비가와 |
+                딩고뮤직
+              </div>
+              <div class="views">
+                <span class="views">조회수 140만회 • 3개월 전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/weather.js"></script>
+  </body>
+</html>

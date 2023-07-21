@@ -1,0 +1,398 @@
+body {
+  background-image: url(/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  font-family: Roboto;
+  font: 600 16px/18px;
+  margin: 0;
+  min-width: 800px;
+}
+
+.login-box {
+  width: 480px;
+  margin: 10px;
+  height: 600px;
+  position: relative;
+  background-color: white;
+  border-radius: 40px;
+}
+.login-snip {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* padding: 90px 70px 50px 70px; */
+  padding: 40px 70px 30px 70px;
+  background-color: pink;
+  border-radius: 40px;
+}
+.login-snip .login,
+.login-snip .sign-up-form {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: all 0.4s linear;
+}
+.login-snip .sign-in,
+.login-snip .sign-up,
+.login-space .group .check {
+  display: none;
+}
+.login-snip .tab,
+.login-space .group .label,
+.login-space .group .button {
+  text-transform: uppercase;
+}
+.login-snip .tab {
+  font-size: 22px;
+  margin-right: 15px;
+  padding-bottom: 5px;
+  margin: 0 15px 10px 0;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+}
+.login-snip .sign-in:checked + .tab,
+.login-snip .sign-up:checked + .tab {
+  color: #fff;
+  border-color: #1161ee;
+}
+.login-space {
+  height: 340px;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.login-space .group {
+  margin-bottom: 15px;
+}
+.login-space .group .label,
+.login-space .group .input,
+.login-space .group .button {
+  width: 100%;
+  color: #fff;
+  display: block;
+}
+.login-space .group .input,
+.login-space .group .button {
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.login-space .group input[data-type="password"] {
+  text-security: circle;
+  -webkit-text-security: circle;
+}
+.login-space .group .label {
+  color: #aaa;
+  font-size: 12px;
+}
+.login-space .group .button {
+  background: #1161ee;
+}
+.login-space .group label .icon {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+}
+.login-space .group label .icon:before,
+.login-space .group label .icon:after {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  transition: all 0.2s ease-in-out 0s;
+}
+.login-space .group label .icon:before {
+  left: 3px;
+  width: 5px;
+  bottom: 6px;
+  transform: scale(0) rotate(0);
+}
+.login-space .group label .icon:after {
+  top: 6px;
+  right: 0;
+  transform: scale(0) rotate(0);
+}
+.login-space .group .check:checked + label {
+  color: #fff;
+}
+.login-space .group .check:checked + label .icon {
+  background: #1161ee;
+}
+.login-space .group .check:checked + label .icon:before {
+  transform: scale(1) rotate(45deg);
+}
+.login-space .group .check:checked + label .icon:after {
+  transform: scale(1) rotate(-45deg);
+}
+.login-snip .sign-in:checked + .tab + .sign-up + .tab + .login-space .login {
+  transform: rotate(0);
+}
+.login-snip .sign-up:checked + .tab + .login-space .sign-up-form {
+  transform: rotate(0);
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hr {
+  height: 2px;
+  margin: 60px 0 50px 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+.foot {
+  text-align: center;
+}
+.card {
+  width: 500px;
+  left: 100px;
+  display: flex;
+}
+
+::placeholder {
+  color: #b3b3b3;
+}
+
+/* :root {
+  --color-white: #ffffff;
+  --color-light: #f1f5f9;
+  --color-black: #121212;
+  --color-night: #001632;
+  --color-red: #f44336;
+  --color-blue: #1a73e8;
+  --color-gray: #80868b;
+  --color-grayish: #dadce0;
+  --color-pink: #edb5a4;
+  --shadow-normal: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+html {
+  font-size: 100%;
+  font-size-adjust: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 550px;
+  padding: 0 2rem;
+  margin: 30px auto;
+}
+
+.ion-logo-apple {
+  font-size: 1.65rem;
+  line-height: inherit;
+  margin-right: 0.5rem;
+  color: var(--color-black);
+}
+.ion-logo-google {
+  font-size: 1.65rem;
+  line-height: inherit;
+  margin-right: 0.5rem;
+  color: var(--color-red);
+}
+.ion-logo-facebook {
+  font-size: 1.65rem;
+  line-height: inherit;
+  margin-right: 0.5rem;
+  color: var(--color-blue);
+}
+
+.text {
+  font-family: inherit;
+  line-height: inherit;
+  text-transform: unset;
+  text-rendering: optimizeLegibility;
+}
+.text-large {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+.text-normal {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-black);
+}
+.text-links {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-pink);
+}
+.text-links:hover {
+  text-decoration: underline;
+}
+
+.main .wrapper {
+  max-width: 28rem;
+  width: 100%;
+  margin: 0;
+  padding: 2rem 2.5rem;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  color: var(--color-black);
+  background: var(--color-white);
+  box-shadow: var(--shadow-large);
+}
+.main .wrapper .form {
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+}
+.main .wrapper .form .input-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.main .wrapper .form .input-field {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: inherit;
+  width: 100%;
+  height: auto;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  color: var(--color-black);
+  background: var(--color-light);
+  text-transform: unset;
+  text-rendering: optimizeLegibility;
+}
+.main .wrapper .form .input-submit {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: inherit;
+  cursor: pointer;
+  min-width: 40%;
+  height: auto;
+  padding: 0.65rem 1.25rem;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  color: var(--color-white);
+  background: var(--color-pink);
+  box-shadow: var(--shadow-medium);
+  text-transform: capitalize;
+  text-rendering: optimizeLegibility;
+}
+.main .wrapper .striped {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+.main .wrapper .striped-line {
+  flex: auto;
+  flex-basis: auto;
+  border: none;
+  outline: none;
+  height: 2px;
+  background: var(--color-grayish);
+}
+.main .wrapper .striped-text {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: inherit;
+  color: var(--color-black);
+  margin: 0 1rem;
+}
+.main .wrapper .method-control {
+  margin-bottom: 1rem;
+}
+.main .wrapper .method-action {
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0.35rem 1.25rem;
+  outline: none;
+  border: 2px solid var(--color-grayish);
+  border-radius: 2rem;
+  color: var(--color-black);
+  background: var(--color-white);
+  text-transform: capitalize;
+  text-rendering: optimizeLegibility;
+  transition: all 0.35s ease;
+}
+.main .wrapper .method-action:hover {
+  background: var(--color-light);
+} */
