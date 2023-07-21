@@ -4,69 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
-
+    <script
+      src="https://kit.fontawesome.com/c4b66f4de9.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
-    <link rel="stylesheet" href="health.css" />
+    <link rel="stylesheet" href="assets/css/health.css" />
+    <link rel="stylesheet" href="/assets/css/navBar.css" />
   </head>
-  <body>
-    <!-- 네비바 -->
-    <nav class="highnav">
-      <a href="" class="icon solid fa-sun" style="left: 0.5%"
-        ><span class="weather">weather</span></a
-      >
-      <ul id="menu">
-        <li class="icon">
-          <a href="entertainment.html"
-            ><i class="icon solid fa-house" style="color: #ffffff"
-              ><span>Home</span></i
-            ></a
-          >
-        </li>
-        <li class="icon">
-          <a href="index.html"
-            ><i class="icon solid fa-dumbbell" style="color: #ffffff"
-              ><span>health</span></i
-            ></a
-          >
-        </li>
-        <li class="icon">
-          <a href="health.html"
-            ><i class="icon solid fa-icons" style="color: #ffffff"
-              ><span>enter</span></i
-            ></a
-          >
-        </li>
-        <li class="icon">
-          <a href="to_do_list.html"
-            ><i class="icon solid fa-list" style="color: #ffffff"
-              ><span>To-do-list</span></i
-            ></a
-          >
-        </li>
-      </ul>
+  <body
+    style="
+      background-image: url(/images/background_img.jpg);
+      background-size: cover;
+    "
+  >
+    <div class="highnav">
+      <a
+        onclick="weatherChange()"
+        id="weather"
+        class="icon solid fa-sun"
+        style="left: 0.5%; display: flex"
+        ><span class="weather">weather</span>
+        <!-- 글자가 사선 아래에 떠서 마진 0으로 바꿈 -->
+        <p
+          style="font-size: 30px; position: relative; left: 10px; margin: 0"
+          class="temperature"
+        ></p>
+      </a>
+
+      <nav id="nav">
+        <a href="/index.html" class="icon solid fa-house"><span>Home</span></a>
+        <a href="#health" class="icon solid fa-dumbbell"><span>health</span></a>
+        <a href="#entertainment" class="icon solid fa-icons"
+          ><span>enter</span></a
+        >
+        <a href="#todolist" class="icon solid fa-list" style="opacity: 1"
+          ><span>To_do_list</span></a
+        >
+      </nav>
+
       <a href="" class="icon solid fa-arrow-right-to-bracket"
         ><span class="login">login</span></a
       >
-    </nav>
-    <!-- 네비바 끝 -->
+    </div>
 
     <!-- 몸무게 그래프, BMI 일지 -->
 
     <div class="div1">
       <div class="weight">
-        <canvas id="myChart" style="height: 1000px; width: 1800px"></canvas>
-        <h1 class="weighth1">몸무게</h1>
+        <canvas id="myChart" style="height: 400px; width: 850px"></canvas>
+        <h2 class="weighth1">몸무게</h2>
         <div class="today">
           <p>오늘의 내 몸무게</p>
           <input
-            style="width: 230px; height: 50px; font-size: 30px"
+            style="width: 100px; height: 25px; font-size: 20px"
             type="text"
             id="tdweight"
           />
-          <label style="font-size: 30px">kg</label>
+          <label style="font-size: 20px">kg</label>
           <button
-            style="width: 60px; height: 56px; font-size: 20px; margin-left: 5px"
+            style="
+              position: absolute;
+
+              width: 40px;
+              height: 30px;
+              font-size: 10px;
+              margin-left: 5px;
+            "
             onclick="btn1();"
           >
             확인
@@ -74,8 +78,8 @@
         </div>
       </div>
       <div class="health">
-        <h1 class="bmih1">BMI 수치</h1>
-        <canvas id="bmiChart" style="height: 1000px; width: 900px"></canvas>
+        <h2 class="bmih1">BMI 수치</h2>
+        <canvas id="bmiChart" style="height: 110px; width: 140px"></canvas>
       </div>
     </div>
     <!-- 몸무게 그래프, BMI 끝 -->
@@ -83,15 +87,15 @@
     <!-- 식단 코드 -->
     <div class="div2">
       <div class="diet">
-        <canvas id="dietChart" style="width: 500px; height: 500px"></canvas>
-        <h1 class="dieth1">칼로리</h1>
-        <h3 class="dieth3">
+        <canvas id="dietChart" style="width: 400px; height: 260px"></canvas>
+        <h2 class="dieth1">칼로리</h2>
+        <h4 class="dieth3">
           목표 칼로리&nbsp;&nbsp;&nbsp;&nbsp; :
           &nbsp;&nbsp;&nbsp;&nbsp;2133&nbsp;cal
-        </h3>
-        <h3 class="dieth3_2">
+        </h4>
+        <h4 class="dieth3_2">
           현재 칼로리&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp;
-        </h3>
+        </h4>
         <p id="now_cal"></p>
         <label class="cal_label">cal</label>
         <input type="text" id="diet_input" onkeypress="diet_cal(event)" />
@@ -100,7 +104,7 @@
 
       <!-- 운동 일지 코드 -->
       <div class="healthDiary">
-        <h1 class="healthDiaryh1">운동 일지</h1>
+        <h2 class="healthDiaryh1">운동 일지</h2>
         <div class="side"></div>
         <textarea
           type="text"
@@ -115,7 +119,7 @@
 
       <!-- 운동 영상 코드 -->
       <div class="video">
-        <h1 class="videoh1">운동 영상</h1>
+        <h2 class="videoh1">운동 영상</h2>
         <iframe
           class="v1"
           src="https://www.youtube.com/embed/z418jyQ-L2I"
@@ -135,6 +139,6 @@
       </div>
     </div>
 
-    <script src="./health.js"></script>
+    <script src="assets/js/health.js"></script>
   </body>
 </html>
