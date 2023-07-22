@@ -127,18 +127,18 @@
 
 
         <!-- 두번째 구역 : 달력 -->
-        <!-- 테이블로 월화수목금토일을 입력해 틀을 만들고 js로 채우기 
-         > 채운 요소를 선택할 수 있어야함
-         맨 위의 년도와 요일을 넘길때마다 해당 날의 시작일과 일수를 파악할 수 있어야함 -->
+        <!-- 테이블로 월화수목금토일을 입력해 틀을 만들고 js로 채우기 > 채운 요소를 선택할 수 있어야함
+         맨 위의 년도와 요일을 넘길때마다 해당 날의 시작일과 일수를 파악할 수 있어야함
+         날짜별로 저장한 해야할일 리스트가 날짜를 옮겨도 계속 유지되어야함 -->
         <div class="nem2 box calender">
             <div class="inner_container" id="twoinner_container">
 
-               <div id="calender main">
+               <!-- <div id="calender main">
                   <table>
                      <tr>
                         <th>
                            <div id="calender_hearder">
-                  
+                              
                            </div>
                         </th>
                      </tr>
@@ -152,9 +152,34 @@
                         <td id="sat">토</td>
                      </tr>
                   </table>
-               </div>
+               </div> -->
+               <div class="sec_cal">
+                  <div class="cal_nav">
+                    <a href="javascript:;" class="nav-btn go-prev">prev</a>
+                    <div class="year-month"></div>
+                    <a href="javascript:;" class="nav-btn go-next">next</a>
+                  </div>
+                  <div class="cal_wrap">
+                    <div class="days">
+                      <div class="day">MON</div>
+                      <div class="day">TUE</div>
+                      <div class="day">WED</div>
+                      <div class="day">THU</div>
+                      <div class="day">FRI</div>
+                      <div class="day">SAT</div>
+                      <div class="day">SUN</div>
+                    </div>
+                    <div class="dates"></div>
+                  </div>
+                </div>
+
             </div>
         </div>
+
+
+
+
+        
 
 
     </div>
