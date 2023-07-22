@@ -16,7 +16,7 @@ var myChart = new Chart(chartArea, {
     ],
   },
   options: {
-    responsive: false,
+    maintainAspectRatio: false,
     scales: {
       y: [
         {
@@ -47,7 +47,7 @@ var bmiChart = new Chart(chartArea, {
     ],
   },
   options: {
-    responsive: true,
+    maintainAspectRatio: false,
     scales: {
       y: {
         min: 20,
@@ -59,8 +59,10 @@ var bmiChart = new Chart(chartArea, {
 
 function btn1() {
   let tdweight = document.getElementById("tdweight").value;
+  let tdheight = document.getElementById("heightinput").value;
   tdweight = Number(tdweight);
-  let bmi = tdweight / ((174 * 174) / 10000);
+  tdheight = Number(tdheight);
+  let bmi = tdweight / ((tdheight * tdheight) / 10000);
   console.log(bmi.toFixed(1));
 
   var dataset = myChart.data.datasets;
@@ -92,8 +94,7 @@ var dietChart = new Chart(ctx, {
     ],
   },
   options: {
-    //cutoutPercentage: 90,
-    responsive: false,
+    maintainAspectRatio: false,
   },
 });
 
