@@ -17,6 +17,22 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script
+      type="text/javascript"
+      src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-1.11.3.min.js"
+    ></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
   </head>
   <body>
     <nav class="highnav">
@@ -55,7 +71,7 @@
 
     <div class="row">
       <div class="col-md-6 mx-auto p-0">
-        <div class="card">
+        <div class="my_card">
           <div class="login-box">
             <div class="login-snip">
               <input
@@ -96,14 +112,60 @@
                     <label for="check"
                       ><span class="icon"></span> Keep me Signed in</label
                     >
-                    <a href="#" class="text text-links">Forgot Password</a>
+                    <a href="#" class="text-links"> Forgot Password</a>
                   </div>
                   <div class="group">
-                    <input type="submit" class="button" value="Sign In" />
+                    <form action="http://127.0.0.1:5500/index.html">
+                      <input type="submit" class="button" value="Sign In" />
+                    </form>
                   </div>
                   <div class="hr"></div>
                   <div class="foot">
-                    <a href="#">Or Sign In with</a>
+                    <p>Or Sign In With</p>
+                  </div>
+                  <div class="login_with_sns">
+                    <button
+                      class="btn-social-login"
+                      style="background: #d93025"
+                    >
+                      <a
+                        href="https://accounts.google.com/o/oauth2/auth?client_id=1096957573126-6b2pbjb625heslke3g97l893knj9g61f.apps.googleusercontent.com&redirect_uri=http://127.0.0.1:5500/index.html&response_type=code&scope=https://www.googleapis.com/auth/drive.metadata.readonly"
+                        ><i class="xi-2x xi-google"></i
+                      ></a>
+                    </button>
+                    <button
+                      class="btn-social-login"
+                      style="background: #24292e"
+                    >
+                      <a
+                        href="https://github.com/login/oauth/authorize?client_id=c449e8005a5eec5d71b4&redirect_uri=http://127.0.0.1:5500/index.html"
+                      >
+                        <i class="xi-2x xi-github"></i
+                      ></a>
+                    </button>
+                    <button
+                      class="btn-social-login"
+                      style="background: #1fc700"
+                    >
+                      <!-- <a
+                        href="https://nid.naver.com/oauth2.0/authorize?client_id=Qc24xejDyx47wjTd9Trq&response_type=code&redirect_uri=http://127.0.0.1:5500/index.html&auth_type=reprompt"
+                      > -->
+                      <a
+                        href="https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=Qc24xejDyx47wjTd9Trq&redirect_uri=http://127.0.0.1:5500/index.html&auth_type=reauthenticate"
+                      >
+                        <i class="xi-2x xi-naver"></i
+                      ></a>
+                    </button>
+                    <button
+                      class="btn-social-login"
+                      style="background: #ffeb00"
+                    >
+                      <a
+                        href="https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=3a6c3035c801405eaa71ebb9dc7f474b&redirect_uri=http://127.0.0.1:5500/index.html"
+                      >
+                        <i class="xi-2x xi-kakaotalk text-dark"></i>
+                      </a>
+                    </button>
                   </div>
                 </div>
                 <div class="sign-up-form">
@@ -146,12 +208,13 @@
                     />
                   </div>
                   <div class="group">
-                    <input type="submit" class="button" value="Sign Up" />
+                    <form
+                      action="http://127.0.0.1:5500/login.html"
+                      onsubmit="SignUpSubmit();"
+                    >
+                      <input type="submit" class="button" value="Sign Up" />
+                    </form>
                   </div>
-                  <div class="hr"></div>
-                  <!-- <div class="foot">
-                    <label for="tab-1">Already Member?</label>
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -159,82 +222,11 @@
         </div>
       </div>
     </div>
-    <!-- <div class="main">
-      <div class="container">
-        <section class="wrapper">
-          <div class="heading">
-            <h1 class="text text-large">Sign In</h1>
-            <br />
-            <p class="text text-normal">
-              New user?
-              <span
-                ><a href="#" class="text text-links">Create an account</a></span
-              >
-            </p>
-          </div>
-          <form name="signin" class="form">
-            <div class="input-control">
-              <label for="email" class="input-label" hidden
-                >Email Address</label
-              >
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="input-field"
-                placeholder="Email Address"
-              />
-            </div>
-            <div class="input-control">
-              <label for="password" class="input-label" hidden>Password</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                class="input-field"
-                placeholder="Password"
-              />
-            </div>
-            <div class="input-control">
-              <a href="#" class="text text-links">Forgot Password</a>
-              <input
-                type="submit"
-                name="submit"
-                class="input-submit"
-                value="Sign In"
-                disabled
-              />
-            </div>
-          </form>
-          <div class="striped">
-            <span class="striped-line"></span>
-            <span class="striped-text">Or</span>
-            <span class="striped-line"></span>
-          </div>
-          <div class="method">
-            <div class="method-control">
-              <a href="#" class="method-action">
-                <i class="ion ion-logo-google"></i>
-                <span>Sign in with Google</span>
-              </a>
-            </div>
-            <div class="method-control">
-              <a href="#" class="method-action">
-                <i class="ion ion-logo-facebook"></i>
-                <span>Sign in with Facebook</span>
-              </a>
-            </div>
-            <div class="method-control">
-              <a href="#" class="method-action">
-                <i class="ion ion-logo-apple"></i>
-                <span>Sign in with Apple</span>
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div> -->
-
     <script src="/assets/js/weather.js"></script>
+    <script
+      src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"
+      charset="utf-8"
+    ></script>
+    <script src="/assets/js/login.js"></script>
   </body>
 </html>

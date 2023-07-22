@@ -115,7 +115,7 @@ function diet_cal(e) {
   let cal_word = document.getElementById("now_cal");
 
   if (e.keyCode === 13) {
-    cal_word.innerHTML = cal_text;
+    cal_word.innerHTML += cal_text;
     console.log(Number(cal_text));
 
     let nowcal = Math.floor((cal_text / 2133) * 100);
@@ -131,4 +131,12 @@ function diet_cal(e) {
     }
     dietChart.update();
   }
+}
+
+function delee() {
+  const a = document.getElementById("word").value;
+  const b = document.getElementById("diaryinput").value;
+  const c = document.getElementById("diaryinput");
+
+  a.remove();
 }

@@ -1,20 +1,28 @@
-               /* div 기본 구역 크기 설정 */
+body{
+   font-family: Roboto;
+}
+
+
+/* div 기본 구역 크기 설정 */
 
                #listAdd_main_hidden{
                   position: absolute;
                   background-color: white;
                   width: 30%;
-                  height: 30%;
+                  height: 40%;
                   border: 1px solid black;
-                  margin-top: 1%;
+                  margin-top: 8%;
+                  left: 15%;
                   display: flex;
                   flex-direction: column;
+                  display: none;
                }
 
 
                .big_nemo{
                   width: 1590px;
                   height: 700px;
+                  margin-left: 1%;
                   display: flex;
                   justify-content: space-evenly;
                }
@@ -29,29 +37,30 @@
                }
       
                   .to_do_list{
-                     width: 100%;
-                     height: 73%;
+                     width: 98%;
+                     height: 92%;
                      background-color: white;
                      border-radius: 5%;
-                     margin-bottom: 0.5em;
+                     margin: 0 0.6em;
+
                   }
       
-                  .to_do_checkbar{
+                  /* .to_do_checkbar{
                      width: 100%;
                      height: 25%;
                      background-color: white;
                      border-radius: 5%;
-                  }
+                  } */
       
                .nem2{
                   width: 40%;
-                  height: 100%;
+                  height: 92%;
                   background-color: white;
                   border-radius: 5%;
                }
       
                      .inner_container{
-                        width: 95%;
+                        width: 98%;
                         height: 92%;
                         margin: 0;
                         padding-left: 2%;
@@ -59,7 +68,7 @@
                         padding-bottom: 2%;
                      }
                      #twoinner_container{
-                        height: 95%;
+                        height: 98%;
                      }
                      #checkbar{
                         width: 97%;
@@ -68,9 +77,13 @@
                         padding-top: 1%;
                         padding-bottom: 1%;
                      }
-      
-      
-      /* 해야하는 일 목록 css */
+
+                     
+/* 리스트 상단 날짜 nav 크기 설정 */
+
+
+                     
+/* 해야하는 일 목록 css */
       
       .to_do_list table {
          font-size: 20px;
@@ -78,22 +91,30 @@
       
       #listAdd{
          width: 100%;
+         /* border: 1px solid black; */
+         table-layout: fixed;
          border-top: 1px solid #444444;
          border-collapse: collapse;
       }
-      #listAdd th,td{
+      #listAdd th{
          border-bottom: 1px solid #444444;
          padding: 10px;
+         /* border: 1px solid black; */
+      }
+      #listAdd td{
+         border-bottom: 1px solid #444444;
+         padding: 10px;
+         /* border: 1px solid black; */
       }
       
 
-      #listAddButton{
+      /* #listAddButton{
          border: 0; 
          background-color: transparent;
 
          font-size: 100%;
-         /* flex-direction: row-reverse; */
-      }
+         flex-direction: row-reverse;
+      } */
 
       /* #listAddButton:hover{
          font-weight: bold;
@@ -102,7 +123,8 @@
       #listAdd_html{
          text-decoration: none;
          color: black;
-         border: 0;
+         border: 0; 
+         background-color: transparent;
       }
 
       #listAdd_html:hover{
@@ -115,8 +137,8 @@
       #listAdd_main_hidden header{
          margin-top: 4%;
          margin-left: 3%;
-         height: 10%;
-         font-size: 17px;
+         height: 1%;
+         font-size: 18px;
       }
 
       #mustit{
@@ -137,4 +159,8 @@
          flex-direction: row-reverse;
          width: 90%;
       }
+
+
+
+/* 달력 css */
 

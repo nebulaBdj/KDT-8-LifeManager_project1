@@ -6,78 +6,47 @@
     <title>Document</title>
 </head>
 <body>
-    <p>방명록입니다.</p>
-    <span style="margin: 0px 12px; font-weight: bold;">작성자</span><input type="text" id="name"><br>
-    <span style="margin: 0px 20px; font-weight: bold;">내용</span><input style="width: 1000px;" type="text" id="text"><br>
-    <button style="margin: 20px 0px;" onclick="bang()" id="wr">작성</button>
-
-    <table border="1" cellspacing="2" cellpadding="5"  id="table">
-        <tr>
-            <th>번호</th>
-            <th>작성자</th>
-            <th>내용</th>
-            <th>작성일</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>김규리</td>
-            <td>여러분 반가워요</td>
-            <td>2022-7-2 15 : 3</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>김규리</td>
-            <td>오늘 수업도 열심히 해봐요</td>
-            <td>2022-7-2 15 : 3</td>
-        </tr>
-        <tr id="trp">
-            <td>3</td>
-            <td>홍길동</td>
-            <td>안뇽!</td>
-            <td>2022-7-2 15 : 4</td>
-        </tr>
-    </table>
-
-    <script>
-        function gDate() {
-            let currentDate = new Date();
-            let fullYear = currentDate.getFullYear()
-            let month = currentDate.getMonth()
-            let day = currentDate.getDate()
-            let hour = currentDate.getHours();
-            let minute = currentDate.getMinutes()
-
-            return `${fullYear}-${month}-${day} ${hour} : ${minute}`;
-        }
-
-        let count = 4;
-
-        function bang() {
-            let tr = document.createElement("tr");
-            let td1 = document.createElement("td");
-            let td2 = document.createElement("td");
-            let td3 = document.createElement("td");
-            let td4 = document.createElement("td");
-            let name = document.getElementById("name");
-            let text = document.getElementById("text");
-            let nameT = name.value;
-            let textT = text.value;
-
-            td1.innerHTML = count;
-            td2.innerHTML = nameT;
-            td3.innerHTML = textT;
-            td4.innerHTML = gDate();
-
-            let table = document.getElementById("table"); 
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            tr.appendChild(td3);
-            tr.appendChild(td4);
-            table.appendChild(tr);
-            
-            count += 1;
-            
-        } 
-    </script>
+    <div class="calender__down">
+        <div class="calender-header">
+          <div class="calender-header__left">
+            <i class="fas fa-chevron-left fa-lg"></i>
+          </div>
+          <div class="calender-header__middle">
+            <input type="number" class="calender-header__year" value="2020" />
+            <select class="calender-header__month">
+              <option value="1">01월</option>
+              <option value="2">02월</option>
+              <option value="3">03월</option>
+              <option value="4">04월</option>
+              <option value="5">05월</option>
+              <option value="6">06월</option>
+              <option value="7">07월</option>
+              <option value="8">08월</option>
+              <option value="9">09월</option>
+              <option value="10">10월</option>
+              <option value="11">11월</option>
+              <option value="12">12월</option>
+            </select>
+          </div>
+          <div class="calender-header__right">
+            <i class="fas fa-chevron-right fa-lg"></i>
+          </div>
+        </div>
+        <table class="tb">
+          <thead class="tb_thead">
+            <tr>
+              <th class="sunday">일</th>
+              <th>월</th>
+              <th>화</th>
+              <th>수</th>
+              <th>목</th>
+              <th>금</th>
+              <th class="saturday">토</th>
+            </tr>
+          </thead>
+          <tbody class="tb_tbody"></tbody>
+        </table>
+      </div>
+    </div>
 </body>
 </html>
