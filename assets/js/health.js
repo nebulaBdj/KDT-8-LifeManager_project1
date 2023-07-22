@@ -105,22 +105,31 @@ function show_name(e) {
   const txt2 = diaryinputEl.value;
 
   if (e.keyCode === 13) {
-    word.innerText += txt;
+    word.innerText += txt + "\n";
     diaryinputEl.value = "";
+    e.preventDefault();
   }
+}
+
+function d() {
+  const diaryDelete = document.getElementById("word");
+  word.innerText = "";
 }
 
 function diet_cal(e) {
   let cal_text = document.getElementById("diet_input").value;
   let cal_word = document.getElementById("now_cal");
+  let cal_area = document.getElementById("caltext");
 
   if (e.keyCode === 13) {
-    cal_word.innerHTML += cal_text;
-    console.log(Number(cal_text));
+    cal_text.innerText = "";
+    cal_text = Number(cal_text);
+    let cal_word_num = Number(cal_word.innerText);
+    cal_word.innerHTML = cal_text + cal_word_num;
 
-    let nowcal = Math.floor((cal_text / 2133) * 100);
-    console.log(nowcal);
-
+    let nowcal = 0;
+    nowcal = Math.floor((cal_word.innerHTML / 2133) * 100);
+    cal_area.innerHTML += "+ " + cal_text + " cal" + "\n";
     var dataset = dietChart.data.datasets;
     for (let i = 0; i < dataset.length; i++) {
       var data = dataset[i].data;
@@ -129,14 +138,7 @@ function diet_cal(e) {
         data[1] = 100 - nowcal;
       }
     }
+
     dietChart.update();
   }
-}
-
-function delee() {
-  const a = document.getElementById("word").value;
-  const b = document.getElementById("diaryinput").value;
-  const c = document.getElementById("diaryinput");
-
-  a.remove();
 }
