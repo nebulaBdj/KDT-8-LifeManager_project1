@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
     <script
       src="https://kit.fontawesome.com/c4b66f4de9.js"
       crossorigin="anonymous"
@@ -12,7 +11,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
     <link rel="stylesheet" href="assets/css/health.css" />
     <link rel="stylesheet" href="/assets/css/navBar.css" />
-    <!-- <link rel="stylesheet" href="assets/css/health_mediaquery.css" /> -->
     <link
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
@@ -41,8 +39,8 @@
         <a href="/entertainment.html" class="icon solid fa-icons"
           ><span>enter</span></a
         >
-        <a href="/to_do_list.html" class="icon solid fa-list"
-          ><span>To_do</span></a
+        <a href="to_do_list.html" class="icon solid fa-list"
+          ><span>To_do_list</span></a
         >
       </nav>
 
@@ -51,27 +49,28 @@
       >
     </div>
 
-    <!-- 몸무게 그래프, BMI 일지 -->
+    <!-- 몸무게 그래프, BMI  -->
 
     <div class="div1">
       <div class="weight">
         <div class="weightChart">
           <canvas id="myChart"></canvas>
         </div>
+
         <h2 class="weighth1">몸무게</h2>
         <div class="today">
-          <label>키&nbsp;&nbsp;</label>
-          <input type="text" id="tdheight" />
-          <label class="cmlabel">cm</label>
-          <label>&nbsp;&nbsp;&nbsp;몸무게&nbsp;&nbsp;</label>
+          <label class="heightlabel">키&nbsp;</label>
+          <input type="text" id="heightinput" />
+          <label for="">cm</label>
+          <label>&nbsp;&nbsp;몸무게&nbsp;</label>
           <input type="text" id="tdweight" />
-          <label class="kglabel">kg</label>
+          <label class="weightlabel">&nbsp;kg</label>
           <button class="weightbtn" onclick="btn1();">확인</button>
         </div>
       </div>
       <div class="health">
         <h2 class="bmih1">BMI 수치</h2>
-        <div class="bmi">
+        <div class="bmiChart">
           <canvas id="bmiChart"></canvas>
         </div>
       </div>
@@ -109,7 +108,6 @@
           rows="20"
           onkeypress="show_name(event)"
         ></textarea>
-        <button id="a" onclick="delee();">삭제</button>
         <p id="word"></p>
       </div>
       <!-- 운동 일지 코드 끝 -->
@@ -135,8 +133,6 @@
         ></iframe>
       </div>
     </div>
-
-    <script src="/assets/js/weather.js"></script>
 
     <script src="assets/js/health.js"></script>
   </body>

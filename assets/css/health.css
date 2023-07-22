@@ -1,13 +1,14 @@
 body {
+  min-width: 775px;
   background-image: url(/images/bg.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
   overflow-y: scroll;
   font-family: Roboto;
-  min-width: 775px;
 }
 
+/* 몸무게 부분 */
 .div1 {
   display: flex;
   position: relative;
@@ -31,50 +32,54 @@ body {
 
 .weightChart {
   position: absolute;
-  top: 100px;
-  left: 30px;
-  width: 850px;
+  width: 875px;
   height: 400px;
-}
-
-.today {
-  position: absolute;
-  left: 540px;
+  left: 20px;
   top: 90px;
 }
 
-#tdheight {
-  width: 50px;
+.heightlabel {
+  font-size: 17px;
+}
+#heightinput {
+  width: 70px;
   height: 20px;
   font-size: 20px;
 }
 
 #tdweight {
-  width: 50px;
+  width: 70px;
   height: 20px;
   font-size: 20px;
 }
 
-.cmlabel {
-  font-size: 20px;
+.weightlabel {
+  font-size: 17px;
 }
 
 .weightbtn {
   position: absolute;
 
   width: 40px;
-  height: 25px;
+  height: 30px;
   font-size: 10px;
   margin-left: 5px;
 }
 
+.today {
+  position: absolute;
+  left: 527px;
+  top: 80px;
+}
+/* 몸무게 부분 끝 */
+
+/* BMI 부분 */
 .health {
   position: relative;
   background-color: white;
   width: 500px;
   height: 500px;
   border-radius: 40px;
-  text-align: center;
 }
 
 .bmih1 {
@@ -83,81 +88,88 @@ body {
   left: 200px;
 }
 
-.bmi {
+.bmiChart {
   position: absolute;
+  top: 87px;
+  left: 10px;
   width: 480px;
-  height: 400px;
-  top: 100px;
-  left: 8px;
+  height: 405px;
 }
+
+/* BMI 부분 끝 */
 
 .div2 {
   display: flex;
   position: relative;
   justify-content: space-between;
-  margin: 40px;
+  left: 20px;
   margin-bottom: 50px;
 }
 
+/* 칼로리 부분 */
 .diet {
   position: absolute;
   background-color: white;
   width: 400px;
   height: 600px;
   top: 30px;
+  left: 20px;
   border-radius: 40px;
+}
+
+.diChart {
+  position: absolute;
+  width: 390px;
+  height: 270px;
+  top: 85px;
 }
 
 .diet .dieth1 {
   position: absolute;
-  left: 165px;
+  left: 155px;
   top: 20px;
 }
 
 .diet .dieth3 {
   position: absolute;
-  left: 105px;
+  left: 100px;
   top: 340px;
 }
 
 .diet .dieth3_2 {
   display: inline-block;
   position: absolute;
-  left: 105px;
-  top: 380px;
+  left: 100px;
+  top: 370px;
 }
 
 #now_cal {
   display: inline-block;
   position: absolute;
-  left: 232px;
-  top: 387px;
+  left: 227px;
+  top: 378px;
   font-weight: bold;
 }
 
 .cal_label {
   display: inline-block;
   position: absolute;
-  left: 272px;
-  top: 403px;
+  left: 268px;
+  top: 394px;
   font-weight: bold;
 }
 
 #diet_input {
   position: absolute;
   left: 120px;
-  top: 540px;
+  top: 520px;
   height: 30px;
   width: 130px;
 }
 
-.diChart {
-  position: absolute;
-  left: 2px;
-  top: 80px;
-  width: 400px;
-  height: 275px;
-}
+/* 칼로리 부분 끝 */
+
+/* 운동 일지 부분 */
 
 .healthDiary {
   position: absolute;
@@ -165,7 +177,7 @@ body {
   width: 400px;
   height: 600px;
   top: 30px;
-  left: 517px;
+  left: 537px;
   border-radius: 40px;
 }
 
@@ -179,7 +191,7 @@ body {
   display: inline-block;
   position: absolute;
   width: 400px;
-  height: 400px;
+  height: 374px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   left: 0px;
@@ -195,14 +207,6 @@ body {
   border-radius: 0 0 40px 40px;
 }
 
-#d {
-  position: absolute;
-  width: 50px;
-  height: 30px;
-  top: 445px;
-  left: 350px;
-}
-
 #word {
   position: absolute;
   left: 5px;
@@ -211,13 +215,15 @@ body {
   font-size: 20px;
 }
 
+/* 운동 일지 부분 */
+
 .video {
   position: absolute;
   background-color: white;
   width: 400px;
   height: 600px;
   top: 30px;
-  left: 1022px;
+  left: 1041px;
   border-radius: 40px;
 }
 
@@ -264,7 +270,7 @@ body {
   }
 
   .weightChart {
-    width: 630px;
+    width: 646px;
     height: 380px;
     top: 120px;
   }
@@ -292,13 +298,16 @@ body {
     font-size: 20px;
   }
 
-  .kglabel {
-    font-size: 20px;
-    margin-left: 60px;
+  .weightlabel {
+    position: absolute;
+    font-size: 18px;
+    left: 249px;
+    top: 2px;
   }
 
   .weightbtn {
     position: absolute;
+    left: 270px;
     width: 40px;
     height: 25px;
     font-size: 10px;
@@ -323,9 +332,9 @@ body {
     left: 292px;
   }
 
-  .bmi {
+  .bmiChart {
     position: absolute;
-    top: 100px;
+    top: 90px;
     width: 635px;
     left: 20px;
   }
@@ -336,7 +345,6 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 40px;
     margin-bottom: 50px;
   }
 
@@ -412,7 +420,7 @@ body {
     width: 320px;
     height: 540px;
     top: 30px;
-    left: 360px;
+    left: 377px;
     border-radius: 40px;
   }
 
@@ -458,7 +466,7 @@ body {
     width: 675px;
     height: 940px;
     top: 600px;
-    left: 0px;
+    left: 17px;
     border-radius: 40px;
   }
 

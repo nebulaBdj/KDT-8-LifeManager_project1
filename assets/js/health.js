@@ -59,8 +59,9 @@ var bmiChart = new Chart(chartArea, {
 
 function btn1() {
   let tdweight = document.getElementById("tdweight").value;
-  let tdheight = document.getElementById("tdheight").value;
+  let tdheight = document.getElementById("heightinput").value;
   tdweight = Number(tdweight);
+  tdheight = Number(tdheight);
   let bmi = tdweight / ((tdheight * tdheight) / 10000);
   console.log(bmi.toFixed(1));
 
