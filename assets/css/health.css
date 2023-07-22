@@ -159,10 +159,23 @@ body {
   font-weight: bold;
 }
 
+#caltext {
+  position: absolute;
+  top: 423px;
+  left: 130px;
+  font-size: 17px;
+  width: 140px;
+  height: 90px;
+  border: 0;
+  font-weight: bold;
+  text-align: center;
+  resize: none;
+}
+
 #diet_input {
   position: absolute;
   left: 120px;
-  top: 520px;
+  top: 530px;
   height: 30px;
   width: 130px;
 }
@@ -205,6 +218,19 @@ body {
   font-size: 20px;
   top: 475px;
   border-radius: 0 0 40px 40px;
+  resize: none;
+}
+
+#diarydelete {
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  background-color: lightgrey;
+  text-align: center;
+  border: 0;
+  top: 445px;
+  left: 350px;
+  color: black;
 }
 
 #word {
@@ -396,6 +422,19 @@ body {
     font-weight: bold;
   }
 
+  #caltext {
+    position: absolute;
+    top: 380px;
+    left: 89px;
+    font-size: 17px;
+    width: 140px;
+    height: 90px;
+    border: 0;
+    font-weight: bold;
+    text-align: center;
+    resize: none;
+  }
+
   #diet_input {
     position: absolute;
     left: 107px;
@@ -448,6 +487,20 @@ body {
     font-size: 15px;
     top: 475px;
     border-radius: 0 0 40px 40px;
+    resize: none;
+    white-space: nowrap;
+  }
+  #diarydelete {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background-color: lightgrey;
+    text-align: center;
+    border: 0;
+    top: 445px;
+    left: 270px;
+    color: black;
+    font-size: 11px;
   }
 
   #word {
