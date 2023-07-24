@@ -1,139 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/c4b66f4de9.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js" 
-    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" 
-    integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" 
-    crossorigin="anonymous"></script>
-    
-    
-    <link rel="stylesheet" href="/assets/css/navBar.css">
-    <link rel="stylesheet" href="/assets/css/to_do_list.css">
+    <script
+      src="https://kit.fontawesome.com/c4b66f4de9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+      integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="/assets/css/navBar.css" />
+    <link rel="stylesheet" href="/assets/css/to_do_list.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
-    crossorigin="anonymous">
-    
-
-    
-</head>
-<body style="background-image: url(/images/background_img.jpg); background-size: cover;">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body
+    style="
+      background-image: url(/images/background_img.jpg);
+      background-size: cover;
+    "
+  >
     <nav class="highnav">
+      <a
+        onclick="weatherChange()"
+        id="weather"
+        class="icon solid fa-sun"
+        style="left: 0.5%; display: flex"
+        ><span class="weather">Weather</span>
+        <p
+          style="
+            font-size: 15px;
+            position: absolute;
+            left: 52px;
+            margin: 0;
+            width: 200px;
+            top: -8px;
+          "
+          class="address"
+        ></p>
+        <p
+          style="
+            font-size: 20px;
+            position: absolute;
+            left: 54px;
+            margin: 0;
+            top: 13px;
+          "
+          class="temperature"
+        ></p>
+      </a>
 
-        <a onclick="weatherChange()" id="weather" class="icon solid fa-sun" style="left: 0.5%; display: flex;"><span class="weather">weather</span>
-            <!-- 글자가 사선 아래에 떠서 마진 0으로 바꿈 -->
-            <p style="font-size: 30px; position:  relative; left: 10px; margin: 0;" class="temperature"></p>	
-        </a>
-        
-        <div id="nav">
-            <a href="/index.html" class="icon solid fa-house"><span>Home</span></a>
-            <a href="/health.html" class="icon solid fa-dumbbell"><span>health</span></a>
-            <a href="/entertainment.html" class="icon solid fa-icons"><span>enter</span></a>
-            <a href="" class="icon solid fa-list" style="opacity: 1;"><span>To_do</span></a>
-        </div>
-        
-        <a href="" class="icon solid fa-arrow-right-to-bracket"><span class="login">login</span></a>
-      </nav>
+      <div id="nav">
+        <a href="/index.html" class="icon solid fa-house"><span>Home</span></a>
+        <a href="/health.html" class="icon solid fa-dumbbell"
+          ><span>health</span></a
+        >
+        <a href="/entertainment.html" class="icon solid fa-icons"
+          ><span>enter</span></a
+        >
+        <a href="" class="icon solid fa-list" style="opacity: 1"
+          ><span>To_do</span></a
+        >
+      </div>
+
+      <a href="" class="icon solid fa-arrow-right-to-bracket"
+        ><span class="login">login</span></a
+      >
+    </nav>
 
     <div class="big_nemo">
       <!-- 첫번째 구역 : 리스트 적는 목록/ 목적 달성 표시바 -->
       <div class="nem1">
-            <div class="box to_do_list">
-               <div class="inner_container" style="display: flex; flex-direction: column;">
-                  
-                  <div class="weakends" style="display: flex;">
-                     <span id="day" style="font-size: 40px;">20 </span>
-                     <span id="week">
-                        <span id="weekend">목요일</span><br>
-                        <span id="year_mounth">2023년 7월</span>
-                     </span>
+        <div class="box to_do_list">
+          <div
+            class="inner_container"
+            style="display: flex; flex-direction: column"
+          >
+            <div class="weakends" style="display: flex">
+              <span id="day" style="font-size: 40px">20 </span>
+              <span id="week">
+                <span id="weekend">목요일</span><br />
+                <span id="year_mounth">2023년 7월</span>
+              </span>
+            </div>
+
+            <span
+              class="index"
+              style="
+                font-size: 20px;
+                margin: 2% 0;
+                display: flex;
+                justify-content: space-between;
+              "
+            >
+              <span>
+                <span
+                  style="color: gold"
+                  class="icon solid fa-arrow-down"
+                ></span>
+                <span> 해야 할 일</span>
+              </span>
+              <span style="margin-left: 20%">중요도</span>
+              <span style="padding-right: 18%">진행 상태</span>
+            </span>
+
+            <table id="listAdd">
+              <tr>
+                <th colspan="4">
+                  <div id="listAdd_div">
+                    <span class="icon solid fa-plus"></span>
+                    <!-- <button id="listAddButton">추가</button> -->
+                    <button onclick="display_listmain()" id="listAdd_html">
+                      추가
+                    </button>
                   </div>
+                </th>
+              </tr>
 
-                  <span class="index" style="font-size: 20px; margin: 2% 0; display: flex; justify-content: space-between;">
-                     <span>
-                        <span style="color: gold;" class="icon solid fa-arrow-down"></span>
-                        <span> 해야 할 일</span>
-                     </span>
-                     <span style="margin-left: 20%;">중요도</span>
-                     <span style="padding-right: 18%;">진행 상태</span>
-                  </span>
-
-                  <table id="listAdd">
-                     <tr>
-                        <th colspan="4">
-                           <div id="listAdd_div">
-                              <span class="icon solid fa-plus"></span>
-                              <!-- <button id="listAddButton">추가</button> -->
-                              <button onclick="display_listmain()" id="listAdd_html">추가</button>
-                           </div>
-                        </th>
-                     </tr>
-                     
-                     <!-- <tr>
+              <!-- <tr>
                         <td id="nel" colspan="2">운동</td>
                         <td>A1</td>
                         <td><input type="checkbox"></td>
                      </tr> -->
-                  </table>
+            </table>
+          </div>
+        </div>
 
-               </div>
-            </div>
-
-            
-
-            <!-- <div class="box to_do_checkbar">
+        <!-- <div class="box to_do_checkbar">
                <div class="inner_container" id="checkbar"></div>
             </div> -->
-
       </div>
-      
+
       <div id="listAdd_main_hidden">
-         <header id="mustheader">할 일 추가</header>
-         <br>
-         <hr/>
-         
-         <div>
-            <input type="text" id="mustit" placeholder="해야 할 일을 입력해주세요.">
-         </div>
-         <div id="hidden_important">
-            <span ><span style="color: dodgerblue;" class="icon solid fa-star"></span> 중요도</span>
-            <select class="todo__importance" required id="impotan">
-               <option value="" disabled selected hidden>ABC</option>
-               <option value="A0">A0</option>
-               <option value="A1">A1</option>
-               <option value="A2">A2</option>
-               <option value="B0">B0</option>
-               <option value="B1">B1</option>
-               <option value="B2">B2</option>
-               <option value="C0">C0</option>
-               <option value="C1">C1</option>
-               <option value="C2">C2</option>
-             </select>
-         </div>
-         <div id="addadd">
-            <!-- <input type="text"> -->
-            <button onclick="display_addpage()" id="listAddButton" type="button" class="btn btn-dark">추가</button>
-         </div>
-         
+        <header id="mustheader">할 일 추가</header>
+        <br />
+        <hr />
+
+        <div>
+          <input
+            type="text"
+            id="mustit"
+            placeholder="해야 할 일을 입력해주세요."
+          />
+        </div>
+        <div id="hidden_important">
+          <span
+            ><span style="color: dodgerblue" class="icon solid fa-star"></span>
+            중요도</span
+          >
+          <select class="todo__importance" required id="impotan">
+            <option value="" disabled selected hidden>ABC</option>
+            <option value="A0">A0</option>
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="B0">B0</option>
+            <option value="B1">B1</option>
+            <option value="B2">B2</option>
+            <option value="C0">C0</option>
+            <option value="C1">C1</option>
+            <option value="C2">C2</option>
+          </select>
+        </div>
+        <div id="addadd">
+          <!-- <input type="text"> -->
+          <button
+            onclick="display_addpage()"
+            id="listAddButton"
+            type="button"
+            class="btn btn-dark"
+          >
+            추가
+          </button>
+        </div>
       </div>
 
-
-        <!-- 두번째 구역 : 달력 -->
-        <!-- 테이블로 월화수목금토일을 입력해 틀을 만들고 js로 채우기 > 채운 요소를 선택할 수 있어야함
+      <!-- 두번째 구역 : 달력 -->
+      <!-- 테이블로 월화수목금토일을 입력해 틀을 만들고 js로 채우기 > 채운 요소를 선택할 수 있어야함
          맨 위의 년도와 요일을 넘길때마다 해당 날의 시작일과 일수를 파악할 수 있어야함
          날짜별로 저장한 해야할일 리스트가 날짜를 옮겨도 계속 유지되어야함 -->
-        <div class="nem2 box calender">
-            <div class="inner_container" id="twoinner_container">
-
-               <!-- <div id="calender main">
+      <div class="nem2 box calender">
+        <div class="inner_container" id="twoinner_container">
+          <!-- <div id="calender main">
                   <table>
                      <tr>
                         <th>
@@ -153,44 +218,37 @@
                      </tr>
                   </table>
                </div> -->
-               <div class="sec_cal">
-                  <div class="cal_nav">
-                    <a href="javascript:;" class="nav-btn go-prev">prev</a>
-                    <div class="year-month"></div>
-                    <a href="javascript:;" class="nav-btn go-next">next</a>
-                  </div>
-                  <div class="cal_wrap">
-                    <div class="days">
-                      <div class="day">MON</div>
-                      <div class="day">TUE</div>
-                      <div class="day">WED</div>
-                      <div class="day">THU</div>
-                      <div class="day">FRI</div>
-                      <div class="day">SAT</div>
-                      <div class="day">SUN</div>
-                    </div>
-                    <div class="dates"></div>
-                  </div>
-                </div>
-
+          <div class="sec_cal">
+            <div class="cal_nav">
+              <a href="javascript:;" class="nav-btn go-prev">prev</a>
+              <div class="year-month"></div>
+              <a href="javascript:;" class="nav-btn go-next">next</a>
             </div>
+            <div class="cal_wrap">
+              <div class="days">
+                <div class="day">MON</div>
+                <div class="day">TUE</div>
+                <div class="day">WED</div>
+                <div class="day">THU</div>
+                <div class="day">FRI</div>
+                <div class="day">SAT</div>
+                <div class="day">SUN</div>
+              </div>
+              <div class="dates"></div>
+            </div>
+          </div>
         </div>
-
-
-
-
-        
-
-
+      </div>
     </div>
 
     <!-- 스크립트 -->
     <script src="/assets/js/weather.js"></script>
     <script src="/assets/js/to_do_list.js"></script>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
-    crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
