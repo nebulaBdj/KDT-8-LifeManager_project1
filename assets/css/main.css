@@ -2314,8 +2314,7 @@ body.is-preload #wrapper {
     padding: 4em;
     text-align: center;
   }
-
-  .arrow {
+    .arrow {
     margin-left: 61%;
   }
 }
@@ -2380,5 +2379,16 @@ body.is-preload #wrapper {
   #footer .copyright li {
     padding-left: 0.5em;
     margin-left: 0.5em;
+  }
+}
+
+@media screen and (max-width: 1680px) {
+  .highnav .address {
+    left: 55px !important;
+    font-size: 15px !important;
+  }
+  .highnav .temperature {
+    left: 57px !important;
+    font-size: 20px !important;
   }
 }

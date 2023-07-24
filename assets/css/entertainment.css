@@ -24,6 +24,7 @@ body {
   grid-auto-rows: 690px;
   grid-gap: 60px;
   padding: 10px 10px 20px 10px;
+  margin-top: 25px;
 }
 
 .sns {
@@ -45,7 +46,7 @@ body {
 }
 
 .insta iframe {
-  width: 312px;
+  width: 318px;
   height: 300px;
   line-height: 300px;
   left: 0;
