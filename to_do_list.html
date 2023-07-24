@@ -55,6 +55,7 @@
                         <span id="weekend">목요일</span><br>
                         <span id="year_mounth">2023년 7월</span>
                      </span>
+
                   </div>
 
                   <span class="index" style="font-size: 20px; margin: 2% 0; display: flex; justify-content: space-between;">
@@ -132,46 +133,30 @@
          날짜별로 저장한 해야할일 리스트가 날짜를 옮겨도 계속 유지되어야함 -->
         <div class="nem2 box calender">
             <div class="inner_container" id="twoinner_container">
-
-               <!-- <div id="calender main">
-                  <table>
-                     <tr>
-                        <th>
-                           <div id="calender_hearder">
-                              
-                           </div>
-                        </th>
-                     </tr>
-                     <tr>
-                        <td id="sun">일</td>
-                        <td id="mon">월</td>
-                        <td id="tue">화</td>
-                        <td id="wed">수</td>
-                        <td id="thu">목</td>
-                        <td id="fri">금</td>
-                        <td id="sat">토</td>
-                     </tr>
-                  </table>
-               </div> -->
-               <div class="sec_cal">
-                  <div class="cal_nav">
-                    <a href="javascript:;" class="nav-btn go-prev">prev</a>
-                    <div class="year-month"></div>
-                    <a href="javascript:;" class="nav-btn go-next">next</a>
-                  </div>
-                  <div class="cal_wrap">
-                    <div class="days">
-                      <div class="day">MON</div>
-                      <div class="day">TUE</div>
-                      <div class="day">WED</div>
-                      <div class="day">THU</div>
-                      <div class="day">FRI</div>
-                      <div class="day">SAT</div>
-                      <div class="day">SUN</div>
-                    </div>
-                    <div class="dates"></div>
-                  </div>
-                </div>
+                <table class="Calendar">
+                  <thead>
+                      <tr>
+                          <td onClick="prevCalendar();" style="cursor:pointer;">&#60;</td>
+                          <td colspan="5">
+                              <span id="calYear"></span>년
+                              <span id="calMonth"></span>월
+                          </td>
+                          <td onClick="nextCalendar();" style="cursor:pointer;">&#62;</td>
+                      </tr>
+                      <tr>
+                          <td>일</td>
+                          <td>월</td>
+                          <td>화</td>
+                          <td>수</td>
+                          <td>목</td>
+                          <td>금</td>
+                          <td>토</td>
+                      </tr>
+                  </thead>
+      
+                  <tbody>
+                  </tbody>
+              </table>
 
             </div>
         </div>
