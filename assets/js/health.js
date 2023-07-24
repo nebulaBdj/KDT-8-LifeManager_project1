@@ -103,9 +103,13 @@ function show_name(e) {
   const diaryinputEl = document.getElementById("diaryinput");
   let txt = document.getElementById("diaryinput").value;
   const txt2 = diaryinputEl.value;
+  let date = new Date();
+
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
 
   if (e.keyCode === 13) {
-    word.innerText += txt + "\n";
+    word.innerHTML += hours + " : " + minutes + " " + txt + "\n";
     diaryinputEl.value = "";
     e.preventDefault();
   }
@@ -120,9 +124,9 @@ function diet_cal(e) {
   let cal_text = document.getElementById("diet_input").value;
   let cal_word = document.getElementById("now_cal");
   let cal_area = document.getElementById("caltext");
+  let cal_text2 = document.getElementById("diet_input");
 
   if (e.keyCode === 13) {
-    cal_text.innerText = "";
     cal_text = Number(cal_text);
     let cal_word_num = Number(cal_word.innerText);
     cal_word.innerHTML = cal_text + cal_word_num;
@@ -140,5 +144,7 @@ function diet_cal(e) {
     }
 
     dietChart.update();
+    cal_text2.value = "";
+    e.preventDefault();
   }
 }

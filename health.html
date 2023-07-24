@@ -15,6 +15,16 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+      integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="highnav">
@@ -23,10 +33,26 @@
         id="weather"
         class="icon solid fa-sun"
         style="left: 0.5%; display: flex"
-        ><span class="weather">weather</span>
-        <!-- 글자가 사선 아래에 떠서 마진 0으로 바꿈 -->
+        ><span class="weather">Weather</span>
         <p
-          style="font-size: 30px; position: relative; left: 10px; margin: 0"
+          style="
+            font-size: 15px;
+            position: absolute;
+            left: 52px;
+            margin: 0;
+            width: 200px;
+            top: -8px;
+          "
+          class="address"
+        ></p>
+        <p
+          style="
+            font-size: 20px;
+            position: absolute;
+            left: 54px;
+            margin: 0;
+            top: 13px;
+          "
           class="temperature"
         ></p>
       </a>
@@ -94,7 +120,7 @@
         <p id="now_cal"></p>
         <label class="cal_label">cal</label>
         <textarea name="" id="caltext" cols="20" rows="6" readonly></textarea>
-        <input type="text" id="diet_input" onkeypress="diet_cal(event)" />
+        <textarea id="diet_input" onkeypress="diet_cal(event)"></textarea>
       </div>
       <!-- 식단 코드 끝 -->
 
@@ -109,8 +135,8 @@
           rows="20"
           onkeypress="show_name(event)"
         ></textarea>
-        <p id="word"></p>
-        <button id="diarydelete" onclick="d()">Delete</button>
+        <textarea id="word" cols="20" rows="10" readonly></textarea>
+        <button id="diarydelete" onclick="d()">초기화</button>
       </div>
       <!-- 운동 일지 코드 끝 -->
 
@@ -136,6 +162,7 @@
       </div>
     </div>
 
+    <script src="assets/js/weather.js"></script>
     <script src="assets/js/health.js"></script>
   </body>
 </html>
