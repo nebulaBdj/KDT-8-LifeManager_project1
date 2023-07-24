@@ -1,4 +1,6 @@
 
+
+
 function display_listmain() {
     let addpage = document.getElementById("listAdd_main_hidden");
     // addpage.switchClass(css2,css1);
@@ -37,221 +39,12 @@ function display_addpage() {
 
 
     addpage.style.display = 'none';
+
+
+    
 }
 
 // 달력 js
-
-//현재 날짜 가지고 오기
-
-// const dt = new Date();
-
-// console.log(dt)
-
-// let nowYear = dt.getFullYear();
-
-// console.log(nowYear)
-
-// let nowMounth = dt.getMonth()+1;
-
-// console.log(nowMounth)
-
-// let nowDay = dt.getDay();
-
-// console.log(nowDay)
-
-// let firstday = dt.setDate(1)
-
-
-//현재 날짜 투두리스트 위에 띄우기
-// let dt = new Date(); // 현재 날짜(로컬 기준) 가져오기
-// // let ut = dt.getTime() + (dt.getTimezoneOffset() * 60 * 1000); // uct 표준시 도출
-// // let kst = 9 * 60 * 60 * 1000; // 한국 kst 기준시간 더하기
-// // let tod = new Date(ut + kst);
-
-// // console.log(tod);
-// // var thisM = new Date(tod.getFullYear(), tod.getMonth(), tod.getDate());
-
-// var nowYear = dt.getFullYear(); // 달력에서 표기하는 연
-// var nowM = dt.getMonth()+1; // 달력에서 표기하는 월
-// var nowDate = dt.getDate(); // 달력
-// var noeweek = dt.getDay();
-
-// let realWeek = "";
-// if (noeweek == 0){
-//     realWeek = "일요일"
-// } else if (noeweek == 1){
-//     realWeek = "월요일"
-// } else if (noeweek == 2){
-//     realWeek = "화요일"
-// } else if (noeweek == 3){
-//     realWeek = "수요일"
-// } else if (noeweek == 4){
-//     realWeek = "목요일"
-// } else if (noeweek == 5){
-//     realWeek = "금요일"
-// } else if (noeweek == 6){
-//     realWeek = "토요일"
-// }
-
-// console.log(nowYear, nowM, nowDate, realWeek);
-
-// let nownow_day = document.getElementById("day");
-// let nownow_week = document.getElementById("weekend");
-// let nownow_yearM = document.getElementById("year_mounth");
-
-// nownow_day.innerText = nowDate;
-// nownow_week.innerText = realWeek;
-// nownow_yearM.innerText = `${nowYear}년 ${nowM}월`;
-
-// console.log(nownow_day, nownow_week, nownow_yearM)
-
-
-// window.onload = function () { 
-//     let nowMonth = new Date();  // 현재 달을 페이지를 로드한 날의 달로 초기화
-//     buildCalendar(nowMonth.getFullYear(), nowMonth.getMonth()); 
-// }    // 웹 페이지가 로드되면 buildCalendar 실행
-
-// let today = new Date();     // 페이지를 로드한 날짜를 저장
-// today.setHours(0, 0, 0, 0);    // 비교 편의를 위해 today의 시간을 초기화
-
-// // 달력 생성 : 해당 달에 맞춰 테이블을 만들고, 날짜를 채워 넣는다.
-// function buildCalendar(year, month) {
-
-
-//     let firstDate = new Date(year, month, 1);     // 이번달 1일
-//     let lastDate = new Date(year, month + 1, 0);  // 이번달 마지막날
-
-//     let tbody_Calendar = document.querySelector(".Calendar > tbody");
-//     document.getElementById("calYear").innerText = year;             // 연도 숫자 갱신
-//     document.getElementById("calMonth").innerText = leftPad(month + 1);  // 월 숫자 갱신
-
-//     while (tbody_Calendar.rows.length > 0) {                        // 이전 출력결과가 남아있는 경우 초기화
-//         tbody_Calendar.deleteRow(tbody_Calendar.rows.length - 1);
-//     }
-
-//     let nowRow = tbody_Calendar.insertRow();        // 첫번째 행 추가           
-
-//     for (let j = 0; j < firstDate.getDay(); j++) {  // 이번달 1일의 요일만큼
-//         let nowColumn = nowRow.insertCell();        // 열 추가
-//     }
-
-//     for (let nowDay = firstDate; nowDay <= lastDate; nowDay.setDate(nowDay.getDate() + 1)) {   // day는 날짜를 저장하는 변수, 이번달 마지막날까지 증가시키며 반복  
-
-//         let nowColumn = nowRow.insertCell();        // 새 열을 추가하고
-//         let newDIV = document.createElement("p");
-//         newDIV.innerHTML = leftPad(nowDay.getDate());        // 추가한 열에 날짜 입력
-//         nowColumn.appendChild(newDIV);
-
-//         if (nowDay.getDay() == 6) {                 // 토요일인 경우
-//             nowRow = tbody_Calendar.insertRow();    // 새로운 행 추가
-//             newDIV.id = "sat";
-//         }
-
-//         if (nowDay.getDay() == 0) {                 // 토요일인 경우
-//             newDIV.id = "sunDay";
-//         }
-
-//         if (nowDay < today) {                       // 지난날인 경우
-//             newDIV.className = "futureDay";
-//             newDIV.onclick = function () { choiceDate(this); }
-//         }
-//         else if (nowDay.getFullYear() == today.getFullYear() && nowDay.getMonth() == today.getMonth() && nowDay.getDate() == today.getDate()) { // 오늘인 경우           
-//             newDIV.className = "today";
-//             newDIV.onclick = function () { choiceDate(this); }
-//         }
-//         else {                                      // 미래인 경우
-//             newDIV.className = "futureDay";
-//             newDIV.onclick = function () { choiceDate(this); }
-//         }
-//     }
-// }
-
-
-// // 날짜 선택
-// function choiceDate(newDIV) {
-//     if (document.getElementsByClassName("choiceDay")[0]) {                              // 기존에 선택한 날짜가 있으면
-//         document.getElementsByClassName("choiceDay")[0].classList.remove("choiceDay");  // 해당 날짜의 "choiceDay" class 제거
-//     }
-//     newDIV.classList.add("choiceDay");           // 선택된 날짜에 "choiceDay" class 추가
-    
-//     console.log(document.getElementsByClassName("choiceDay").innerHTML)
-
-//     // function buildCalendar(year, month,) {
-
-
-    
-//     // ///현재 날짜 투두리스트 위에 띄우기
-//     // let dt = new Date(); // 현재 날짜(로컬 기준) 가져오기
-//     // let ut = dt.getTime() + (dt.getTimezoneOffset() * 60 * 1000); // uct 표준시 도출
-//     // let kst = 9 * 60 * 60 * 1000; // 한국 kst 기준시간 더하기
-//     // let tod = new Date(ut + kst);
-
-//     // console.log(tod);
-//     // var thisM = new Date(tod.getFullYear(), tod.getMonth(), tod.getDate());
-
-//     // var nowYear = thisM.getFullYear(); // 달력에서 표기하는 연
-//     // var nowM = thisM.getMonth()+1; // 달력에서 표기하는 월
-//     // var nowDate = thisM.getDate(); // 달력
-//     // var noeweek = thisM.getDay();
-
-//     // let realWeek = "";
-//     // if (noeweek == 0){
-//     //     realWeek = "일요일"
-//     // } else if (noeweek == 1){
-//     //     realWeek = "월요일"
-//     // } else if (noeweek == 2){
-//     //     realWeek = "화요일"
-//     // } else if (noeweek == 3){
-//     //     realWeek = "수요일"
-//     // } else if (noeweek == 4){
-//     //     realWeek = "목요일"
-//     // } else if (noeweek == 5){
-//     //     realWeek = "금요일"
-//     // } else if (noeweek == 6){
-//     //     realWeek = "토요일"
-//     // }
-
-//     // console.log(nowYear, nowM, nowDate, realWeek);
-
-//     // let nownow_day = document.getElementById("day");
-//     // let nownow_week = document.getElementById("weekend");
-//     // let nownow_yearM = document.getElementById("year_mounth");
-
-//     // nownow_day.innerText = nowDate;
-//     // nownow_week.innerText = realWeek;
-//     // nownow_yearM.innerText = `${nowYear}년 ${nowM}월`;
-
-//     // console.log(nownow_day, nownow_week, nownow_yearM)
-    
-// }
-
-// // 이전달 버튼 클릭
-// function prevCalendar() {
-//     nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() - 1, nowMonth.getDate());   // 현재 달을 1 감소
-//     buildCalendar();    // 달력 다시 생성
-// }
-// // 다음달 버튼 클릭
-// function nextCalendar() {
-//     nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, nowMonth.getDate());   // 현재 달을 1 증가
-//     buildCalendar();    // 달력 다시 생성
-// }
-
-// // input값이 한자리 숫자인 경우 앞에 '0' 붙혀주는 함수
-// function leftPad(value) {
-//     if (value < 10) {
-//         value = "0" + value;
-//         return value;
-//     }
-//     return value;
-// }
-
-
-
-
-// let choiceDay = document.getElementsByClassName("choiceDay");
-// //let choiceDay_Date = choiceDay.innerHTML;
-
-// console.log("CHOICE",choiceDay);
 
 
 
@@ -370,6 +163,30 @@ function buildCalendar() {
         }
     }
 
+    let selectedDate = 0;
+    let dayString = "";
+
+    let cells = document.querySelectorAll(".Calendar td p");
+    cells.forEach(cell => {
+        cell.addEventListener("click", function () {
+            selectedDate = this.innerHTML; // 선택된 날짜 정보 가져오기
+            let dayOfWeek = this.parentNode.cellIndex; // 요일 정보 가져오기
+            let weekdays = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+            dayString = weekdays[dayOfWeek]; // 요일을 실제 요일 문자열로 변환
+
+            console.log("선택한 날짜:", selectedDate);
+            console.log("요일:", dayString);
+            nownow_day.innerText = selectedDate;
+            nownow_week.innerText = dayString;
+
+
+        });
+    }); // 어떻게 이게 가능한지 알아보기
+
+
+    
+
+    
 }
 
 // 날짜 선택
@@ -382,6 +199,15 @@ function choiceDate(newDIV) {
     // console.log(document.getElementsByClassName("choiceDay"));
 
 }
+
+// function dateDay() {
+//     // let choi = document.getElementsByClassName("choiceDay");
+//     // // let date = choi.innerText;
+//     // // nownow_day.innerText = date;
+//     // console.log(choi.innerText);
+// }
+
+
 
 // 이전달 버튼 클릭
 function prevCalendar() {
@@ -402,9 +228,6 @@ function leftPad(value) {
     }
     return value;
 }
-
-
-
 
 // console.lod(choiceDate(this));
 
