@@ -2314,6 +2314,9 @@ body.is-preload #wrapper {
     padding: 4em;
     text-align: center;
   }
+    .arrow {
+    margin-left: 61%;
+  }
 }
 
 @media screen and (max-width: 736px) {
