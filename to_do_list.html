@@ -28,9 +28,40 @@
 <body style="background-image: url(/images/background_img.jpg); background-size: cover;">
     <nav class="highnav">
 
-        <a onclick="weatherChange()" id="weather" class="icon solid fa-sun" style="left: 0.5%; display: flex;"><span class="weather">weather</span>
-            <!-- 글자가 사선 아래에 떠서 마진 0으로 바꿈 -->
+        <!-- <a onclick="weatherChange()" id="weather" class="icon solid fa-sun" style="left: 0.5%; display: flex;"><span class="weather">weather</span>
+             글자가 사선 아래에 떠서 마진 0으로 바꿈
             <p style="font-size: 30px; position:  relative; left: 10px; margin: 0;" class="temperature"></p>	
+        </a> -->
+
+        <a
+          onclick="weatherChange()"
+          id="weather"
+          class="icon solid fa-sun"
+          style="left: 0.5%; display: flex"
+          ><span class="weather">Weather</span>
+          <p
+            style="
+              font-size: 20px;
+              position: absolute;
+              left: 77px;
+              margin: 0;
+              width: 200px;
+              top: -8px;
+			  font-family: Roboto;
+            "
+            class="address"
+          ></p>
+          <p
+            style="
+              font-size: 25px;
+              position: absolute;
+              left: 79px;
+              margin: 0;
+              top: 13px;
+			  font-family: Roboto;
+            "
+            class="temperature"
+          ></p>
         </a>
         
         <div id="nav">
@@ -40,7 +71,7 @@
             <a href="" class="icon solid fa-list" style="opacity: 1;"><span>To_do</span></a>
         </div>
         
-        <a href="" class="icon solid fa-arrow-right-to-bracket"><span class="login">login</span></a>
+        <a href="/login.html" class="icon solid fa-arrow-right-to-bracket"><span class="login">login</span></a>
       </nav>
 
     <div class="big_nemo">
@@ -63,8 +94,8 @@
                         <span style="color: gold;" class="icon solid fa-arrow-down"></span>
                         <span> 해야 할 일</span>
                      </span>
-                     <span style="margin-left: 20%;">중요도</span>
-                     <span style="padding-right: 18%;">진행 상태</span>
+                     <span style="margin-right: 5%;">중요도</span>
+                     <span style="margin-right: 25%;">진행 상태</span>
                   </span>
 
                   <table id="listAdd">
