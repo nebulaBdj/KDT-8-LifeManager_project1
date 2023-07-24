@@ -94,7 +94,7 @@
         <p id="now_cal"></p>
         <label class="cal_label">cal</label>
         <textarea name="" id="caltext" cols="20" rows="6" readonly></textarea>
-        <input type="text" id="diet_input" onkeypress="diet_cal(event)" />
+        <textarea id="diet_input" onkeypress="diet_cal(event)"></textarea>
       </div>
       <!-- 식단 코드 끝 -->
 
@@ -109,8 +109,8 @@
           rows="20"
           onkeypress="show_name(event)"
         ></textarea>
-        <p id="word"></p>
-        <button id="diarydelete" onclick="d()">Delete</button>
+        <textarea id="word" cols="20" rows="10" readonly></textarea>
+        <button id="diarydelete" onclick="d()">초기화</button>
       </div>
       <!-- 운동 일지 코드 끝 -->
 
