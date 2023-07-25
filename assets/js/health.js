@@ -109,7 +109,7 @@ function show_name(e) {
   let minutes = date.getMinutes();
 
   if (e.keyCode === 13) {
-    word.innerHTML += hours + " : " + minutes + " " + txt + "\n";
+    word.innerHTML += hours + ":" + minutes + " " + txt + "\n";
     diaryinputEl.value = "";
     e.preventDefault();
   }
