@@ -34,64 +34,6 @@ function onGeoOk(position) {
         data.documents[0].address.region_2depth_name;
       console.log(address);
     });
-
-  // $.ajax({
-  //   url:
-  //     "https://dapi.kakao.com/v2/local/geo/coord2address.json?x=" +
-  //     longitude +
-  //     "&y=" +
-  //     latitude,
-  //   type: "GET",
-  //   headers: { Authorization: `KakaoAK ${kakao_API_KEY}` },
-  //   success: function (data) {
-  //     console.log(data);
-  //     address =
-  //       data.documents[0].address.region_1depth_name +
-  //       " " +
-  //       data.documents[0].address.region_2depth_name;
-  //     console.log(address);
-  //   },
-  //   error: function (e) {
-  //     console.log(data);
-  //     console.log(e);
-  //   },
-  // });
-
-  // async function getAddressFromCoordinates(longitude, latitude, kakao_API_KEY) {
-  //   try {
-  //     const data = await $.ajax({
-  //       url:
-  //         "https://dapi.kakao.com/v2/local/geo/coord2address.json?x=" +
-  //         longitude +
-  //         "&y=" +
-  //         latitude,
-  //       type: "GET",
-  //       headers: { Authorization: `KakaoAK ${kakao_API_KEY}` },
-  //     });
-
-  //     const address =
-  //       data.documents[0].road_address.region_1depth_name +
-  //       " " +
-  //       data.documents[0].road_address.region_2depth_name;
-
-  //     return address;
-  //   } catch (error) {
-  //     throw error;
-  //   }
-  // }
-
-  // (async () => {
-  //   try {
-  //     address_value = await getAddressFromCoordinates(
-  //       longitude,
-  //       latitude,
-  //       kakao_API_KEY
-  //     );
-  //     console.log(address_value);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // })();
 }
 
 function onGeoError() {
