@@ -22,7 +22,7 @@ body{
                .big_nemo{
                   width: 1180px;
                   height: 550px;
-                  margin-left: 1%;
+                  margin: auto;
                   display: flex;
                   justify-content: space-evenly;
                }
@@ -38,7 +38,7 @@ body{
       
                   .to_do_list{
                      width: 98%;
-                     height: 92%;
+                     height: 98%;
                      background-color: white;
                      border-radius: 5%;
                      margin: 0 0.6em;
@@ -54,7 +54,7 @@ body{
       
                .nem2{
                   width: 40%;
-                  height: 92%;
+                  height: 98%;
                   background-color: white;
                   border-radius: 5%;
                }
@@ -107,6 +107,23 @@ body{
          /* border: 1px solid black; */
       }
       
+      #listAd{
+         width: 100%;
+         /* border: 1px solid black; */
+         table-layout: fixed;
+         border-top: 1px solid #444444;
+         border-collapse: collapse;
+      }
+      #listAd th{
+         border-bottom: 1px solid #444444;
+         padding: 10px;
+         /* border: 1px solid black; */
+      }
+      #listAd td{
+         border-bottom: 1px solid #444444;
+         padding: 10px;
+         /* border: 1px solid black; */
+      }
 
       /* #listAddButton{
          border: 0; 
@@ -163,120 +180,6 @@ body{
 
 
 /* 달력 css */
-
-/* .sec_cal {
-   width: 90%;
-   position: relative;
-   top: 1%;
-   margin: 0 auto;
-   font-family: "NotoSansR";
-}
-
-.sec_cal .cal_nav {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-weight: 700;
-   font-size: 48px;
-   line-height: 78px;
-}
-
-.sec_cal .cal_nav .year-month {
-   width: 300px;
-   text-align: center;
-   line-height: 1;
-}
-
-.sec_cal .cal_nav .nav {
-   display: flex;
-   border: 1px solid #333333;
-   border-radius: 5px;
-}
-
-.sec_cal .cal_nav .go-prev,
-.sec_cal .cal_nav .go-next {
-   display: block;
-   width: 50px;
-   height: 78px;
-   font-size: 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-.sec_cal .cal_nav .go-prev::before,
-.sec_cal .cal_nav .go-next::before {
-   content: "";
-   display: block;
-   width: 20px;
-   height: 20px;
-   border: 3px solid #000;
-   border-width: 3px 3px 0 0;
-   transition: border 0.1s;
-}
-
-.sec_cal .cal_nav .go-prev:hover::before,
-.sec_cal .cal_nav .go-next:hover::before {
-   border-color: #ed2a61;
-}
-
-.sec_cal .cal_nav .go-prev::before {
-   transform: rotate(-135deg);
-}
-
-.sec_cal .cal_nav .go-next::before {
-   transform: rotate(45deg);
-}
-
-.sec_cal .cal_wrap {
-   padding-top: 40px;
-   position: relative;
-   margin: 0 auto;
-}
-
-.sec_cal .cal_wrap .days {
-   display: flex;
-   margin-bottom: 20px;
-   padding-bottom: 20px;
-   border-bottom: 1px solid #ddd;
-}
-
-.sec_cal .cal_wrap::after {
-   top: 368px;
-}
-
-.sec_cal .cal_wrap .day {
-   display:flex;
-   align-items: center;
-   justify-content: center;
-   width: calc(100% / 7);
-   text-align: left;
-   color: #6d6b6b;
-   font-size: 12px;
-   text-align: center;
-   border-radius:5px
-}
-
-.current.today {background: rgb(242 242 242);}
-
-.sec_cal .cal_wrap .dates {
-   display: flex;
-   flex-flow: wrap;
-   height: 290px;
-}
-
-.sec_cal .cal_wrap .day:nth-child(7n -1) {
-   color: #3c6ffa;
-}
-
-.sec_cal .cal_wrap .day:nth-child(7n) {
-   color: #ed2a61;
-}
-
-.sec_cal .cal_wrap .day.disable {
-   color: #ddd;
-} */
-
 @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
 
 /* body { background-color : skyblue; }  */
@@ -345,4 +248,83 @@ td {
     color: #fff;
     font-weight: 600;
     cursor: pointer;
+}
+
+.index{
+   font-size: 20px; 
+   margin: 2% 0; 
+   display: flex; 
+   justify-content: space-between;
+}
+
+@media screen and (min-width: 1481px) {
+   .big_nemo{
+      width: 1500px;
+   }
+
+   .nem1{
+      margin-right: 2%;
+   }
+   .nem2{
+      margin-left: 2%;
+   }
+   
+}
+
+@media screen and (max-width: 1000px) and (min-width: 501px) {
+   .big_nemo{
+      width: 90%;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 20px;
+      position: relative;
+      top: 100px;
+      /* top: 70px; */
+      margin: auto;
+   }
+   .nem1{
+      margin: auto;
+      width: 98%;
+   }
+   .nem2{
+      /* display: none; */
+      margin: auto;
+      width: 98%;
+   }
+   .index{
+      font-size: 17px;
+   }
+   #addadd button{
+      font-size: small;
+   }
+
+}
+
+@media screen and (max-width: 500px) {
+   .big_nemo{
+      width: 90%;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 20px;
+      position: relative;
+      /* top: 70px; */
+      top: 100px;
+      margin: auto;
+   }
+   .nem1{
+      margin: auto;
+      width: 98%;
+   
+   }
+   .nem2{
+      /* display: none; */
+      margin: auto;
+      width: 98%;
+   }
+   .index{
+      font-size: 15px;
+   }
+   #addadd button{
+      font-size: smaller;
+   }
 }

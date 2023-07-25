@@ -64,12 +64,12 @@
         
         <div id="nav">
             <a href="/index.html" class="icon solid fa-house"><span>Home</span></a>
-            <a href="/health.html" class="icon solid fa-dumbbell"><span>health</span></a>
-            <a href="/entertainment.html" class="icon solid fa-icons"><span>enter</span></a>
-            <a href="" class="icon solid fa-list" style="opacity: 1;"><span>To_do</span></a>
+            <a href="/health.html" class="icon solid fa-dumbbell"><span>Health</span></a>
+            <a href="/entertainment.html" class="icon solid fa-icons"><span>Ent.</span></a>
+            <a href="" class="icon solid fa-list" style="opacity: 1;"><span>To Do</span></a>
         </div>
         
-        <a href="/login.html" class="icon solid fa-arrow-right-to-bracket"><span class="login">login</span></a>
+        <a href="/login.html" class="icon solid fa-arrow-right-to-bracket"><span class="login">Login</span></a>
       </nav>
 
     <div class="big_nemo">
@@ -80,14 +80,14 @@
                   
                   <div class="weakends" style="display: flex;">
                      <span id="day" style="font-size: 40px;">20 </span>
-                     <span id="week">
+                     <span id="week" style="margin: 5px;">
                         <span id="weekend">목요일</span><br>
                         <span id="year_mounth">2023년 7월</span>
                      </span>
 
                   </div>
 
-                  <span class="index" style="font-size: 20px; margin: 2% 0; display: flex; justify-content: space-between;">
+                  <span class="index" >
                      <span>
                         <span style="color: gold;" class="icon solid fa-arrow-down"></span>
                         <span> 해야 할 일</span>
@@ -96,23 +96,25 @@
                      <span style="margin-right: 25%;">진행 상태</span>
                   </span>
 
+
                   <table id="listAdd">
+
+                  </table>
+                  <table id="listAd">
                      <tr>
-                        <th colspan="4">
+                        <td colspan="4">
                            <div id="listAdd_div">
                               <span class="icon solid fa-plus"></span>
                               <!-- <button id="listAddButton">추가</button> -->
                               <button onclick="display_listmain()" id="listAdd_html">추가</button>
                            </div>
-                        </th>
+                        </td>
                      </tr>
-                     
-                     <!-- <tr>
-                        <td id="nel" colspan="2">운동</td>
-                        <td>A1</td>
-                        <td><input type="checkbox"></td>
-                     </tr> -->
                   </table>
+
+                  <button onclick="storage()" type="button" class="btn btn-outline-warning" style="margin-top: 5px;">
+                     저장
+                  </button>
 
                </div>
             </div>

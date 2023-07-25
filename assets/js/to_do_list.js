@@ -1,5 +1,5 @@
-
-
+let arr = [];
+let storageDate = 0;
 
 function display_listmain() {
     let addpage = document.getElementById("listAdd_main_hidden");
@@ -31,6 +31,11 @@ function display_addpage() {
     td1.innerHTML = inmustit;
     td2.innerHTML = impotan;
     td3.appendChild(checkbox);
+    arr.push({
+        todo: inmustit,
+        important: impotan,
+        // complete: false
+    })
 
     tr.appendChild(td1);
     tr.appendChild(td2);
@@ -57,7 +62,7 @@ let nownow_day = document.getElementById("day");
 let nownow_week = document.getElementById("weekend");
 let nownow_yearM = document.getElementById("year_mounth");
 
-
+let selectedDate = 0;
 // 달력 생성 : 해당 달에 맞춰 테이블을 만들고, 날짜를 채워 넣는다.
 function buildCalendar() {
 
@@ -163,7 +168,7 @@ function buildCalendar() {
         }
     }
 
-    let selectedDate = 0;
+    
     let dayString = "";
 
     let cells = document.querySelectorAll(".Calendar td p");
@@ -179,14 +184,55 @@ function buildCalendar() {
             nownow_day.innerText = selectedDate;
             nownow_week.innerText = dayString;
 
+            $("#listAdd").empty();
+
+            let datas = JSON.parse(window.localStorage.getItem(selectedDate));
+            // console.log(datas);
+
+            if( datas.length ){
+                datas.forEach((data,i) => {
+                    let table = document.getElementById("listAdd");
+    
+                    let tr = document.createElement("tr");
+                    let td1 = document.createElement("td");
+                    let td2 = document.createElement("td");
+                    let td3 = document.createElement("td");
+                    let checkbox = document.createElement("input");
+    
+                    checkbox.type = 'checkbox';
+                    checkbox.id = 'checkcheck';
+    
+                    let impotanS = data.todo; 
+                    let inmustitS = data.important;
+    
+                    td1.setAttribute("colspan","2");
+                    td1.innerHTML = impotanS;
+                    td2.innerHTML = inmustitS;
+                    td3.appendChild(checkbox);
+    
+                    tr.appendChild(td1);
+                    tr.appendChild(td2);
+                    tr.appendChild(td3);
+                    table.prepend(tr);  
+    
+               })
+            }
+            
 
         });
     }); // 어떻게 이게 가능한지 알아보기
 
+    
+}
 
+function storage() {
+    storageDate = selectedDate;
+    console.log(arr);
+    window.localStorage.setItem(storageDate, JSON.stringify(arr));
+    arr = [];
+    // $("#listAdd").empty();
     
 
-    
 }
 
 // 날짜 선택
@@ -196,17 +242,7 @@ function choiceDate(newDIV) {
     }
     newDIV.classList.add("choiceDay");// 선택된 날짜에 "choiceDay" class 추가
 
-    // console.log(document.getElementsByClassName("choiceDay"));
-
 }
-
-// function dateDay() {
-//     // let choi = document.getElementsByClassName("choiceDay");
-//     // // let date = choi.innerText;
-//     // // nownow_day.innerText = date;
-//     // console.log(choi.innerText);
-// }
-
 
 
 // 이전달 버튼 클릭
@@ -228,12 +264,3 @@ function leftPad(value) {
     }
     return value;
 }
-
-// console.lod(choiceDate(this));
-
-// let choice = document.getElementsByClassName("choiceDay");
-
-
-// nownow_day.innerText = choice;
-// nownow_week.innerText = realWeek;
-// nownow_yearM.innerText = `${nowYear}년 ${nowM}월`;
