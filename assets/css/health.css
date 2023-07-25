@@ -1,5 +1,5 @@
 body {
-  min-width: 775px;
+  min-width: 700px;
   background-image: url(/images/bg.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -292,7 +292,7 @@ body {
   top: 350px;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   /* 몸무게 부분 */
   .div1 {
     display: flex;
