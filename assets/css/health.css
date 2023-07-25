@@ -1,126 +1,77 @@
 body {
-  min-width: 700px;
+  min-width: 960px;
   background-image: url(/images/bg.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
   overflow-y: scroll;
   font-family: Roboto;
+  margin: 10px;
+  padding-bottom: 30px;
 }
 
-/* 몸무게 부분 */
-.div1 {
+.wrapper1 {
   display: flex;
-  position: relative;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 1480px;
+  justify-content: space-evenly;
 }
 
 .weight {
-  left: 40px;
+  margin: 20px;
   background-color: white;
   width: 900px;
   height: 500px;
   border-radius: 40px;
 }
 
-.weighth1 {
-  position: absolute;
-  left: 420px;
-  top: 10px;
-}
-
 .weightChart {
   position: relative;
-  width: 875px;
+  width: 890px;
   height: 400px;
-  left: 20px;
-  top: 90px;
-}
-
-.heightlabel {
-  font-size: 17px;
-}
-#heightinput {
-  width: 70px;
-  height: 20px;
-  font-size: 20px;
-}
-
-#tdweight {
-  width: 70px;
-  height: 20px;
-  font-size: 20px;
-}
-
-.weightlabel {
-  font-size: 17px;
-}
-
-.weightbtn {
-  position: absolute;
-
-  width: 40px;
-  height: 30px;
-  font-size: 10px;
-  margin-left: 5px;
-}
-
-.weightbtn:hover {
-  background-image: url(/images/bg.jpg);
-  border: 0;
+  padding-left: 7px;
+  /* left: 20px;
+  top: 90px; */
 }
 
 .today {
-  position: absolute;
-  left: 527px;
-  top: 80px;
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
 }
-/* 몸무게 부분 끝 */
 
-/* BMI 부분 */
+.today .weightbtn {
+  margin-left: 8px;
+}
+
 .health {
-  position: relative;
+  /* position: relative; */
   background-color: white;
   width: 500px;
   height: 500px;
   border-radius: 40px;
-}
-
-.bmih1 {
-  position: absolute;
-  top: 10px;
-  left: 200px;
+  margin: 20px;
 }
 
 .bmiChart {
-  position: absolute;
-  top: 87px;
+  position: relative;
+  /* top: 87px; */
   width: 480px;
   height: 405px;
 }
 
-/* BMI 부분 끝 */
-
-.div2 {
+.wrapper2 {
   display: flex;
-  position: relative;
-  justify-content: space-between;
-  left: 20px;
-  margin-bottom: 50px;
-  width: 1500px;
-  margin: 0 auto;
+  justify-content: center;
+  justify-content: space-evenly;
 }
 
-/* 칼로리 부분 */
 .diet {
-  position: absolute;
+  position: relative;
   background-color: white;
   width: 400px;
   height: 600px;
   top: 30px;
   border-radius: 40px;
+  margin: 10px;
 }
 
 .diChart {
@@ -188,18 +139,14 @@ body {
   font-size: 20px;
 }
 
-/* 칼로리 부분 끝 */
-
-/* 운동 일지 부분 */
-
 .healthDiary {
-  position: absolute;
+  position: relative;
   background-color: white;
   width: 400px;
   height: 600px;
   top: 30px;
-  left: 537px;
   border-radius: 40px;
+  margin: 10px;
 }
 
 .healthDiaryh1 {
@@ -207,17 +154,6 @@ body {
   left: 150px;
   top: 20px;
 }
-
-/* .side {
-  display: inline-block;
-  position: absolute;
-  width: 400px;
-  height: 374px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  left: 0px;
-  top: 100px;
-} */
 
 #diaryinput {
   position: absolute;
@@ -258,16 +194,14 @@ body {
   border: 0;
 }
 
-/* 운동 일지 부분 */
-
 .video {
-  position: absolute;
+  position: relative;
   background-color: white;
   width: 400px;
   height: 600px;
   top: 30px;
-  left: 1067px;
   border-radius: 40px;
+  margin: 10px;
 }
 
 .videoh1 {
@@ -292,161 +226,119 @@ body {
   top: 350px;
 }
 
-@media screen and (max-width: 1000px) {
-  /* 몸무게 부분 */
-  .div1 {
+@media screen and (max-width: 1300px) {
+  .wrapper1 {
     display: flex;
-    flex-direction: column;
-    position: relative;
-    margin: 0 auto;
-    left: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+
   .weight {
-    left: 40px;
+    margin: 20px;
     background-color: white;
-    width: 681px;
+    width: 900px;
     height: 500px;
     border-radius: 40px;
-  }
-  .weighth1 {
-    position: absolute;
-    left: 312px;
-    top: 10px;
   }
 
   .weightChart {
-    width: 646px;
-    height: 380px;
-    top: 120px;
+    position: relative;
+    width: 890px;
+    height: 400px;
+    padding-left: 7px;
+    /* left: 20px;
+    top: 90px; */
   }
 
   .today {
-    position: absolute;
-    left: 202px;
-    top: 90px;
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
   }
 
-  #tdheight {
-    width: 50px;
-    height: 20px;
-    font-size: 20px;
+  .today .weightbtn {
+    margin-left: 8px;
   }
 
-  #tdweight {
-    position: absolute;
-    width: 50px;
-    height: 20px;
-    font-size: 20px;
-  }
-
-  .cmlabel {
-    font-size: 20px;
-  }
-
-  .weightlabel {
-    position: absolute;
-    font-size: 18px;
-    left: 249px;
-    top: 2px;
-  }
-
-  .weightbtn {
-    position: absolute;
-    left: 270px;
-    width: 40px;
-    height: 25px;
-    font-size: 10px;
-    margin-left: 10px;
-  }
-
-  /* 몸무게 부분  끝*/
-
-  /* BMI 부분 */
   .health {
-    position: relative;
-    top: 30px;
+    /* position: relative; */
     background-color: white;
-    width: 681px;
+    width: 900px;
     height: 500px;
     border-radius: 40px;
-  }
-
-  .bmih1 {
-    position: absolute;
-    top: 10px;
-    left: 292px;
+    margin: 20px;
   }
 
   .bmiChart {
-    position: absolute;
-    top: 90px;
-    width: 635px;
-    left: 20px;
-  }
-  /* BMI 부분 끝*/
-
-  /* 칼로리 부분 */
-  .div2 {
-    display: flex;
-    flex-direction: column;
     position: relative;
-    margin-bottom: 50px;
-    margin: 0 auto;
-    top: 30px;
+    /* top: 87px; */
+    width: 890px;
+    height: 405px;
+  }
+
+  .wrapper2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .diet {
-    position: absolute;
+    position: relative;
     background-color: white;
-    width: 320px;
-    height: 540px;
+    width: 400px;
+    height: 600px;
     top: 30px;
     border-radius: 40px;
+    margin: 10px;
+  }
+
+  .diChart {
+    position: absolute;
+    width: 390px;
+    height: 270px;
+    top: 85px;
   }
 
   .diet .dieth1 {
     position: absolute;
-    left: 125px;
+    left: 155px;
     top: 20px;
   }
 
   .diet .dieth3 {
     position: absolute;
-    font-size: 13px;
-    left: 85px;
-    top: 310px;
+    left: 100px;
+    top: 340px;
   }
 
   .diet .dieth3_2 {
     display: inline-block;
     position: absolute;
-    font-size: 13px;
-    left: 84px;
-    top: 340px;
+    left: 100px;
+    top: 370px;
   }
 
   #now_cal {
     display: inline-block;
     position: absolute;
-    font-size: 13px;
-    left: 189px;
-    top: 347px;
+    left: 227px;
+    top: 378px;
     font-weight: bold;
   }
 
   .cal_label {
     display: inline-block;
     position: absolute;
-    font-size: 13px;
-    left: 221px;
-    top: 360px;
+    left: 268px;
+    top: 394px;
     font-weight: bold;
   }
 
   #caltext {
     position: absolute;
-    top: 380px;
-    left: 89px;
+    top: 423px;
+    left: 130px;
     font-size: 17px;
     width: 140px;
     height: 90px;
@@ -458,48 +350,40 @@ body {
 
   #diet_input {
     position: absolute;
-    left: 107px;
-    top: 490px;
-    height: 20px;
-    width: 100px;
+    left: 120px;
+    top: 530px;
+    height: 30px;
+    width: 130px;
+    resize: none;
+    font-size: 20px;
   }
 
-  .diChart {
-    position: relative;
-    left: 12px;
-    top: 80px;
-    width: 300px;
-    height: 240px;
-  }
-  /* 칼로리 부분 끝 */
-
-  /* 운동 일지 부분 */
   .healthDiary {
-    position: absolute;
+    position: relative;
     background-color: white;
-    width: 320px;
-    height: 540px;
+    width: 400px;
+    height: 600px;
     top: 30px;
-    left: 377px;
     border-radius: 40px;
+    margin: 10px;
   }
 
   .healthDiaryh1 {
     position: absolute;
-    left: 112px;
-    top: 15px;
+    left: 150px;
+    top: 20px;
   }
 
   #diaryinput {
     position: absolute;
-    width: 314px;
-    height: 60px;
-    font-size: 15px;
+    width: 394px;
+    height: 120px;
+    font-size: 20px;
     top: 475px;
     border-radius: 0 0 40px 40px;
     resize: none;
-    white-space: nowrap;
   }
+
   #diarydelete {
     position: absolute;
     width: 50px;
@@ -508,52 +392,56 @@ body {
     text-align: center;
     border: 0;
     top: 445px;
-    left: 270px;
+    left: 350px;
     color: black;
     font-size: 11px;
   }
 
+  #diarydelete:hover {
+    background-image: url(/images/bg.jpg);
+  }
+
   #word {
     position: absolute;
-    width: 300px;
-    left: 8px;
-    right: 8px;
+    width: 383px;
+    height: 340px;
+    left: 7px;
+    right: 0px;
     top: 90px;
-    font-size: 15px;
+    font-size: 19px;
+    resize: none;
+    border: 0;
   }
-  /* 운동 일지 부분 끝 */
 
-  /* 운동 영상 부분 */
   .video {
-    position: absolute;
+    position: relative;
     background-color: white;
-    width: 675px;
-    height: 940px;
-    top: 600px;
-    left: 17px;
+    width: 900px;
+    height: 600px;
+    top: 30px;
     border-radius: 40px;
+    margin: 10px;
   }
 
   .videoh1 {
     position: absolute;
-    left: 280px;
+    left: 400px;
     top: 20px;
   }
 
   .v1 {
     position: absolute;
-    width: 600px;
-    height: 400px;
-    left: 35px;
-    top: 100px;
+    width: 423px;
+    height: 340px;
+    left: 20px;
+    top: 149px;
   }
 
   .v2 {
     position: absolute;
-    width: 600px;
-    height: 400px;
-    left: 35px;
-    top: 520px;
+    width: 423px;
+    height: 340px;
+    left: 457px;
+    top: 149px;
   }
-  /* 운동 영상 부분 */
 }
