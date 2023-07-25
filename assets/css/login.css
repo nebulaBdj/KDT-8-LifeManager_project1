@@ -103,6 +103,7 @@ body {
 .login-space .group .button {
   background: #eeb6a5;
   color: #fff;
+  margin-top: 50px;
 }
 .login-space .group .button:hover {
   cursor: pointer;
